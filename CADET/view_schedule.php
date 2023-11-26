@@ -1,48 +1,7 @@
 <?php
-// Replace these with your actual database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "ncc";
-
-// Create a database connection
-$conn = new mysqli($servername, $username, $password, $database);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-session_start();
-$username = $_SESSION['uname'];
-$sql = "SELECT ncc_unit_enrolled FROM enroll where regimental_number='$username'"; // Change 'id' to match the PDF record you want to retrieve
-$result = $conn->query($sql);
-$row = $result->fetch_assoc();
-$unit=$row['ncc_unit_enrolled'];
-// Retrieve the PDF data from the database
-$years=date('Y');
-$sql = "SELECT file_name, file_content FROM pdf_files where unit='$unit' and years=$years"; // Change 'id' to match the PDF record you want to retrieve
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-    $row = $result->fetch_assoc();
-    $fileName = $row['file_name'];
-    $fileContent = $row['file_content'];
-
-    // Set headers for PDF download
-    header("Content-Type: application/pdf");
-    header("Content-Disposition: inline; filename='$fileName'");
-    header("Content-Length: " . strlen($fileContent));
-    
-    // Output the PDF content
-    echo $fileContent;
-} else {
-    echo "PDF not found in the database.";
-}
-
-// Close the database connection
-$conn->close();
+require('dbcon.php');
 ?>
-
+<?php include 'session.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -85,13 +44,7 @@ $conn->close();
 </head>
 
 <body>
-<?php
-require_once('dbcon.php');
-session_start();
-$username = $_SESSION['uname'];
-// Close the database connection
-$conn->close();
-?>
+
 
  <!-- ======= Header ======= -->
  <header id="header" class="header fixed-top d-flex align-items-center">
@@ -125,61 +78,45 @@ $conn->close();
 
     <li class="nav-item dropdown pe-3">
 
-      <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-        <img src="assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
-        <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
-      </a><!-- End Profile Iamge Icon -->
+<a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+  <img src="assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
+  <span><?php echo $username; ?></span>
+</a><!-- End Profile Iamge Icon -->
 
-      <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-        <li class="dropdown-header">
-          <h6>Kevin Anderson</h6>
-          <span>Web Designer</span>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
+<ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
+  <li class="dropdown-header">
+    <h6><?php echo $studentName; ?></h6>
+    <span>Reg no: <?php echo $regno; ?></span><br>
+    <span>Mobile no: <?php echo $mno; ?></span>
+  </li>
+  
 
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-person"></i>
-            <span>My Profile</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
+ 
+  <li>
+    <hr class="dropdown-divider">
+  </li>
 
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
-            <i class="bi bi-gear"></i>
-            <span>Account Settings</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
+  <li>
+    <a class="dropdown-item d-flex align-items-center" href="update_password.php">
+      <i class="bi bi-question-circle"></i>
+      <span >Change password</span>
+    </a>
+  </li>
+  <li>
+    <hr class="dropdown-divider">
+  </li>
 
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="pages-faq.html">
-            <i class="bi bi-question-circle"></i>
-            <span>Need Help?</span>
-          </a>
-        </li>
-        <li>
-          <hr class="dropdown-divider">
-        </li>
+  <li>
+    <a class="dropdown-item d-flex align-items-center" href="#">
+      <i class="bi bi-box-arrow-right"></i>
+      <span>Sign Out</span>
+    </a>
+  </li>
 
-        <li>
-          <a class="dropdown-item d-flex align-items-center" href="#">
-            <i class="bi bi-box-arrow-right"></i>
-            <span>Sign Out</span>
-          </a>
-        </li>
+</ul><!-- End Profile Dropdown Items -->
+</li><!-- End Profile Nav -->
 
-      </ul><!-- End Profile Dropdown Items -->
-    </li><!-- End Profile Nav -->
-
-  </ul>
+</ul>
 </nav><!-- End Icons Navigation -->
 
 </header><!-- End Header -->
@@ -300,21 +237,31 @@ $conn->close();
     </div><!-- End Page Title -->
 
     <section class="section profile">
-      <div class="row">
-        <div class="col-xl-4">
-
-          <div class="card">
-            <div class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-             
-  <form action="" method="post">
-    <button type="submit">View Schedule</button>
-  </form>
+    <section class="section">
+    <div class="container mt-2">
+  <div class="row"  >
+    <div class="col-lg-12">
+      <div class="card" style="height: 500px;margin-top:0px;">
+        <div class="card-body" id="dynamicContent">
           
-             
-            </div>
-          </div>
-
+          <div class="card-body" id="pdfContainer">
+          <h5 class="card-title">PDF Viewer</h5>
+          <!-- PDF will be displayed here -->
+          <iframe  src="viewww.php" id="pdfViewer" width="100%" height="100%" frameborder="0"></iframe>
         </div>
+          <!-- This div will hold dynamically loaded content -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
+    </section>
 
         
 

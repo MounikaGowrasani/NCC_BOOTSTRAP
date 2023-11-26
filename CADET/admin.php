@@ -42,7 +42,7 @@ if(isset($_POST['submit']))
         } elseif ($y == 'ano2') {
             header('location: /NCC_MAIN/NCC2/p.php');
         } elseif ($y == 'cadet') {
-            header('location: /NiceAdmin/index.php');
+            header('location: /NCC_BOOTSTRAP/CADET/index.php');
             
         }
     } else {
