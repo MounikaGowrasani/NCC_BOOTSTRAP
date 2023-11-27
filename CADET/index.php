@@ -40,6 +40,46 @@ require('dbcon.php');
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+
+        /* Style the modal */
+        .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style the modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    margin: 15% auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+
+
+
+    </style>
 </head>
 
 <body>
@@ -71,8 +111,7 @@ if (isset($_SESSION['uname'])) {
     // Close the result set
     $result->close();
     
-    // Close the database connection
-    $conn->close();
+  
 }
  else
     echo "log out";
@@ -93,7 +132,7 @@ if (isset($_SESSION['uname'])) {
             // Update the password in the database
             $updateQuery = "UPDATE logins SET passwords = '$newPassword' WHERE username = '$username'";
             if ($conn->query($updateQuery) === TRUE) {
-                echo "Password updated successfully.";
+                echo "<script>alert('Password updated successfully.');</script>";
             } else {
                 echo "Error updating password: " . $connection->error;
             }
@@ -157,7 +196,7 @@ if (isset($_SESSION['uname'])) {
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="update_password.php">
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
                 <span >Change password</span>
               </a>
@@ -169,7 +208,7 @@ if (isset($_SESSION['uname'])) {
             <li>
               <a class="dropdown-item d-flex align-items-center" href="logout.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span >Sign Out</span>
+                <span >Log Out</span>
               </a>
             </li>
 
@@ -180,6 +219,8 @@ if (isset($_SESSION['uname'])) {
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
+
+
 
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
@@ -327,6 +368,21 @@ if (isset($_SESSION['uname'])) {
 
 
       </div>
+      <div id="password-form" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePasswordForm()">&times;</span>
+        <form method="post" action="">
+            <label for="new_password">New Password:</label>
+            <input type="password" name="new_password" required><br>
+            <br>
+            <label for="confirm_new_password">Confirm New Password:</label>
+            <input  type="password" name="confirm_new_password" required><br>
+            <br>
+            <input  type="submit" class="update_password" name="update_password" value="Save Password">
+        </form>
+    </div>
+</div>
+
     </section>
 
   </main><!-- End #main -->
@@ -347,7 +403,23 @@ if (isset($_SESSION['uname'])) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("update-password-button").addEventListener("click", function() {
+    showPasswordForm();
+});
 
+// Function to display the password form dialog
+function showPasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "none";
+}
+  </script>
 </body>
 
 </html>
