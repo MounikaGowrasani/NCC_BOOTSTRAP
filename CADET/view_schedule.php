@@ -238,23 +238,10 @@ require('dbcon.php');
 
     <section class="section profile">
     <section class="section">
-    <div class="container mt-2">
-  <div class="row"  >
-    <div class="col-lg-12">
-      <div class="card" style="height: 500px;margin-top:0px;">
-        <div class="card-body" id="dynamicContent">
-          
-          <div class="card-body" id="pdfContainer">
-          <h5 class="card-title">PDF Viewer</h5>
+
           <!-- PDF will be displayed here -->
-          <iframe  src="viewww.php" id="pdfViewer" width="100%" height="100%" frameborder="0"></iframe>
-        </div>
-          <!-- This div will hold dynamically loaded content -->
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+          <iframe  src="viewww.php" id="pdfViewer" width="100%" height="90%" frameborder="0"></iframe>
+     
 
 
 
