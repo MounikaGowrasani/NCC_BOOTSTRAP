@@ -42,261 +42,15 @@ require('dbcon.php');
 </head>
 
 <body>
-<?php
-// Start the session to access session variables
-session_start();
-// Check if the 'uname' session variable exists
-if (isset($_SESSION['uname'])) {
-   
-    $username = $_SESSION['uname'];
-    echo $username;
-    
-    $query = "SELECT stu_name,pno,Registration_number FROM enroll WHERE regimental_number = '$username'";
-    $result = $conn->query($query);
-
-    if ($result->num_rows > 0) {
-        // Output data of the student
-       
-        while ($row = $result->fetch_assoc()) {
-            $studentName = $row['stu_name'];
-            $mno=$row['pno'];
-            $regno=$row['Registration_number'];
-            echo $studentName;
-        }
-    } else {
-        echo "Student not found.";
-    }
-
-    // Close the result set
-    $result->close();
-    
-    // Close the database connection
-    $conn->close();
-}
- else
-    echo "log out";
-
-
-    if (isset($_POST['update_password'])) {
-        // Handle password update here
-        $newPassword = $_POST['new_password'];
-        $confirmNewPassword = $_POST['confirm_new_password'];
-        if ($newPassword === $confirmNewPassword) {
-           
-    
-            // Check for a successful connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $connection->connect_error);
-            }
-    
-            // Update the password in the database
-            $updateQuery = "UPDATE logins SET passwords = '$newPassword' WHERE username = '$username'";
-            if ($conn->query($updateQuery) === TRUE) {
-                echo "Password updated successfully.";
-            } else {
-                echo "Error updating password: " . $connection->error;
-            }
-    
-            // Close the database connection
-            $conn->close();
-        } else {
-            echo "New password and confirmation do not match.";
-        }
-    }
-?>
-  <!-- ======= Header ======= -->
-  <header id="header" class="header fixed-top d-flex align-items-center">
-
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/ncclogo-removebg-preview.png" alt="">
-        <span class="d-none d-lg-block">Cadet</span>
-      </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
-    </div><!-- End Logo -->
-
-    
-
-    <nav class="header-nav ms-auto">
-      <ul class="d-flex align-items-center">
-
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" >
-          <span class="d-none d-lg-block">Home</span>
-           
-          </a><!-- End Notification Icon -->
-
-         
-
-        </li><!-- End Notification Nav -->
-
-        
-
-        <li class="nav-item dropdown pe-3">
-
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
-            <span><?php echo $username; ?></span>
-          </a><!-- End Profile Iamge Icon -->
-
-          <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
-            <li class="dropdown-header">
-              <h6><?php echo $studentName; ?></h6>
-              <span>Reg no: <?php echo $regno; ?></span><br>
-              <span>Mobile no: <?php echo $mno; ?></span>
-            </li>
-            
-
-           
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="update_password.php">
-                <i class="bi bi-question-circle"></i>
-                <span >Change password</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
-                <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
-              </a>
-            </li>
-
-          </ul><!-- End Profile Dropdown Items -->
-        </li><!-- End Profile Nav -->
-
-      </ul>
-    </nav><!-- End Icons Navigation -->
-
-  </header><!-- End Header -->
-
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
-
-    <ul class="sidebar-nav" id="sidebar-nav">
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-
-        
-        
-      </a>
-     
-    </div>
-  
-    <li class="nav-heading">Dashboard</li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="view_schedule.php">
-          <i class="bi bi-person"></i>
-          <span> View Schedule</span>
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="events.php">
-          <i class="bi bi-person"></i>
-          <span>View Events</span>
-        </a>
-      </li>
-  
-
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="view_camps.php">
-              <i class="bi bi-circle"></i><span>View Camps</span>
-            </a>
-          </li>
-          <li>
-            <a href="registered_camps.php">
-              <i class="bi bi-circle"></i><span>Registered Camps</span>
-            </a>
-          </li>
-         
-        </ul>
-      </li><!-- End Components Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="feedback.php">
-          <i class="bi bi-person"></i>
-          <span>Feedback</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>About NCC</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="motto.php">
-              <i class="bi bi-circle"></i><span>Motto of NCC</span>
-            </a>
-          </li>
-          <li>
-            <a href="pledge.php">
-              <i class="bi bi-circle"></i><span>Pledge</span>
-            </a>
-          </li>
-          <li>
-            <a href="ncc_flag.php">
-              <i class="bi bi-circle"></i><span>NCC Flag</span>
-            </a>
-          </li>
-          <li>
-            <a href="ncc_song.php">
-              <i class="bi bi-circle"></i><span>NCC Song</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="faq.php">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="contact.php">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
-
   <main id="main" class="main">
 
-    <div class="pagetitle">
-      <h1>Events</h1>
-      <nav>
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Events</li>
-        </ol>
-      </nav>
-    </div><!-- End Page Title -->
+
 
     <section class="section">
-      <div class="row">
+      <div class="row" style="margin-top: -50px;">
         <div class="col-lg-6">
 
-          <div class="card">
+          <div class="card" >
           <div class="container">
         
         <br>
@@ -354,6 +108,7 @@ if (isset($_SESSION['uname'])) {
                     echo "<li><a href='view1.php?eventName=$eventName'>$eventName</a></li>";
                 }
             } else {
+              echo "<br>";
                 echo "No Events found for the selected type.";
             }
 
@@ -377,19 +132,7 @@ if (isset($_SESSION['uname'])) {
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
+ 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
