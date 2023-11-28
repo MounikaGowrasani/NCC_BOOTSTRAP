@@ -158,7 +158,7 @@ require('dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="view_camps.php">
+            <a href="campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>

@@ -149,7 +149,7 @@ require('dbcon.php');
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="events.php">
+        <a class="nav-link collapsed" href="eventss.php">
           <i class="bi bi-person"></i>
           <span>View Events</span>
         </a>
@@ -163,7 +163,7 @@ require('dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="view_camps.php">
+            <a href="campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
