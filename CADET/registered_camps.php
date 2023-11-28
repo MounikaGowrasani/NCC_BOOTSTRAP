@@ -50,11 +50,12 @@ require('dbcon.php');
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
+    <i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="index.html" class="logo d-flex align-items-center">
         <img src="assets/img/ncclogo-removebg-preview.png" alt="">
         <span class="d-none d-lg-block">Cadet</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+     
     </div><!-- End Logo -->
 
     
