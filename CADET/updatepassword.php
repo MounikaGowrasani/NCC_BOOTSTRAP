@@ -21,7 +21,8 @@ if (isset($_POST['update_password'])) {
     
           
         } else {
-            echo "New password and confirmation do not match.";
+            
+            echo "<script>alert('New password and confirmation do not match.');</script>";
         }
     }
     ?>

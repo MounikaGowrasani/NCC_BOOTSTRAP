@@ -2,6 +2,7 @@
 require('dbcon.php');
 ?>
 <?php include 'session.php';?>
+<?php include 'updatepassword.php';?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -96,8 +97,10 @@ require('dbcon.php');
               <hr class="dropdown-divider">
             </li>
 
+          
+
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="update_password.php">
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
                 <span >Change password</span>
               </a>
@@ -107,9 +110,9 @@ require('dbcon.php');
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="logout.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span >Log Out</span>
               </a>
             </li>
 
@@ -269,6 +272,20 @@ if (isset($_GET['registerid'])) {
 
        
       </div>
+      <div id="password-form" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePasswordForm()">&times;</span>
+        <form method="post" action="">
+            <label for="new_password">New Password:</label>
+            <input type="password" name="new_password" required><br>
+            <br>
+            <label for="confirm_new_password">Confirm New Password:</label>
+            <input  type="password" name="confirm_new_password" required><br>
+            <br>
+            <input  type="submit" class="update_password" name="update_password" value="Save Password">
+        </form>
+    </div>
+</div>
     </section>
 
   </main><!-- End #main -->
@@ -301,7 +318,23 @@ if (isset($_GET['registerid'])) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+<script>
+  document.getElementById("update-password-button").addEventListener("click", function() {
+    showPasswordForm();
+});
 
+// Function to display the password form dialog
+function showPasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "none";
+}
+  </script>
 </body>
 
 </html>

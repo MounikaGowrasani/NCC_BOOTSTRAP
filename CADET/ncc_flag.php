@@ -1,6 +1,8 @@
 <?php
 require('dbcon.php');
 ?>
+<?php include 'session.php';?>
+<?php include 'updatepassword.php';?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -42,68 +44,7 @@ require('dbcon.php');
 </head>
 
 <body>
-<?php
-// Start the session to access session variables
-session_start();
-// Check if the 'uname' session variable exists
-if (isset($_SESSION['uname'])) {
-   
-    $username = $_SESSION['uname'];
-    echo $username;
-    
-    $query = "SELECT stu_name,pno,Registration_number FROM enroll WHERE regimental_number = '$username'";
-    $result = $conn->query($query);
 
-    if ($result->num_rows > 0) {
-        // Output data of the student
-       
-        while ($row = $result->fetch_assoc()) {
-            $studentName = $row['stu_name'];
-            $mno=$row['pno'];
-            $regno=$row['Registration_number'];
-            echo $studentName;
-        }
-    } else {
-        echo "Student not found.";
-    }
-
-    // Close the result set
-    $result->close();
-    
-    // Close the database connection
-    $conn->close();
-}
- else
-    echo "log out";
-
-
-    if (isset($_POST['update_password'])) {
-        // Handle password update here
-        $newPassword = $_POST['new_password'];
-        $confirmNewPassword = $_POST['confirm_new_password'];
-        if ($newPassword === $confirmNewPassword) {
-           
-    
-            // Check for a successful connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $connection->connect_error);
-            }
-    
-            // Update the password in the database
-            $updateQuery = "UPDATE logins SET passwords = '$newPassword' WHERE username = '$username'";
-            if ($conn->query($updateQuery) === TRUE) {
-                echo "Password updated successfully.";
-            } else {
-                echo "Error updating password: " . $connection->error;
-            }
-    
-            // Close the database connection
-            $conn->close();
-        } else {
-            echo "New password and confirmation do not match.";
-        }
-    }
-?>
 
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center">
@@ -155,22 +96,24 @@ if (isset($_SESSION['uname'])) {
             <hr class="dropdown-divider">
           </li>
 
-          <li>
-            <a class="dropdown-item d-flex align-items-center" href="update_password.php">
-              <i class="bi bi-question-circle"></i>
-              <span >Change password</span>
-            </a>
-          </li>
-          <li>
-            <hr class="dropdown-divider">
-          </li>
+         
 
           <li>
-            <a class="dropdown-item d-flex align-items-center" href="#">
-              <i class="bi bi-box-arrow-right"></i>
-              <span>Sign Out</span>
-            </a>
-          </li>
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
+                <i class="bi bi-question-circle"></i>
+                <span >Change password</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                <i class="bi bi-box-arrow-right"></i>
+                <span >Log Out</span>
+              </a>
+            </li>
 
         </ul><!-- End Profile Dropdown Items -->
       </li><!-- End Profile Nav -->
@@ -319,6 +262,20 @@ if (isset($_SESSION['uname'])) {
 
        
       </div>
+      <div id="password-form" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePasswordForm()">&times;</span>
+        <form method="post" action="">
+            <label for="new_password">New Password:</label>
+            <input type="password" name="new_password" required><br>
+            <br>
+            <label for="confirm_new_password">Confirm New Password:</label>
+            <input  type="password" name="confirm_new_password" required><br>
+            <br>
+            <input  type="submit" class="update_password" name="update_password" value="Save Password">
+        </form>
+    </div>
+</div>
     </section>
 
   </main><!-- End #main -->
@@ -351,7 +308,23 @@ if (isset($_SESSION['uname'])) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  document.getElementById("update-password-button").addEventListener("click", function() {
+    showPasswordForm();
+});
 
+// Function to display the password form dialog
+function showPasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "none";
+}
+  </script>
 </body>
 
 </html>
