@@ -98,21 +98,21 @@ require('dbcon.php');
   </li>
 
   <li>
-    <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
-      <i class="bi bi-question-circle"></i>
-      <span >Change password</span>
-    </a>
-  </li>
-  <li>
-    <hr class="dropdown-divider">
-  </li>
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
+                <i class="bi bi-question-circle"></i>
+                <span >Change password</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
-  <li>
-    <a class="dropdown-item d-flex align-items-center" href="#" >
-      <i class="bi bi-box-arrow-right"></i>
-      <span>Sign Out</span>
-    </a>
-  </li>
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="logout.php">
+                <i class="bi bi-box-arrow-right"></i>
+                <span >Log Out</span>
+              </a>
+            </li>
 
 </ul><!-- End Profile Dropdown Items -->
 </li><!-- End Profile Nav -->
@@ -231,8 +231,7 @@ require('dbcon.php');
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-          <li class="breadcrumb-item">Users</li>
-          <li class="breadcrumb-item active">Profile</li>
+          <li class="breadcrumb-item active">View Schedule</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
