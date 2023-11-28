@@ -4,7 +4,6 @@ session_start();
 
 if (isset($_SESSION['campIdd'])) {
     $campId = $_SESSION['campIdd'];
-
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -28,7 +27,6 @@ if (isset($_SESSION['campIdd'])) {
         if ($result1->num_rows > 0) {
             $row1 = $result1->fetch_assoc();
             $regno = $row1['Registration_number'];
-
             // Check if the registration number already exists in the 'register' table
             $checkSql = "SELECT * FROM register WHERE regno = '$regno' and campid='$campId'";
             $checkResult = $conn->query($checkSql);
@@ -40,7 +38,7 @@ if (isset($_SESSION['campIdd'])) {
                 $status = "no";
 
                 // Insert data into the 'register' table
-                $sql = "INSERT INTO register VALUES ('$campId', '$regno', '$status','NULL')";
+                $sql = "INSERT INTO register (campId, regno, status) VALUES ('$campId', '$regno', '$status')";
 
                 if ($conn->query($sql) === TRUE) {
                     echo "Application submitted successfully.";
