@@ -52,7 +52,7 @@ require('dbcon.php');
 
     <div class="d-flex align-items-center justify-content-between">
     <i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/ncclogo-removebg-preview.png" alt="">
         <span class="d-none d-lg-block">Cadet</span>
       </a>
@@ -130,7 +130,7 @@ require('dbcon.php');
 
     <ul class="sidebar-nav" id="sidebar-nav">
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
 
         
         
@@ -246,7 +246,7 @@ require('dbcon.php');
           <div class="card">
             <div class="card-body">
               <center><h1 style="font-family: 'Times New Roman';">Motto of NCC</h1></center><br>
-              <h5 style=" text-align: center; font-family: 'Times New Roman'; font-weight: normal; line-height: 1.5;">
+              <h5 style=" text-align: justify; font-family: 'Times New Roman'; font-weight: normal; line-height: 1.5;">
                 The need for having a motto for the Corps was discussed in the 11th Central Advisory Committee (CAC) meeting held on 11 Aug 1978. 
                 The mottos suggested were “Duty and Discipline”; “Duty, Unity and Discipline”; “Duty and Unity”; “Unity and Discipline”. 
                 The final decision for the selection of “Unity and Discipline” as the motto for the NCC was taken in the 12th CAC meeting held on 12 Oct 1980.

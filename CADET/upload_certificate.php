@@ -51,7 +51,7 @@ require('dbcon.php');
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
         <img src="assets/img/ncclogo-removebg-preview.png" alt="">
         <span class="d-none d-lg-block">Cadet</span>
       </a>
@@ -129,7 +129,7 @@ require('dbcon.php');
 
     <ul class="sidebar-nav" id="sidebar-nav">
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
 
         
         
@@ -231,7 +231,7 @@ require('dbcon.php');
       <h1>Modal</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
           <li class="breadcrumb-item">Components</li>
           <li class="breadcrumb-item active">Modal</li>
         </ol>

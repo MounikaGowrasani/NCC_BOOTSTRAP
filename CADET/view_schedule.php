@@ -128,7 +128,7 @@ require('dbcon.php');
 
     <ul class="sidebar-nav" id="sidebar-nav">
     <div class="d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="index.php" class="logo d-flex align-items-center">
 
         
         
@@ -230,7 +230,7 @@ require('dbcon.php');
       <h1>Profile</h1>
       <nav>
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item"><a href="index.php">Home</a></li>
           <li class="breadcrumb-item active">View Schedule</li>
         </ol>
       </nav>
