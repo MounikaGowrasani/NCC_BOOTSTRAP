@@ -140,7 +140,8 @@ if (isset($_SESSION['uname'])) {
             // Close the database connection
             $conn->close();
         } else {
-            echo "New password and confirmation do not match.";
+         
+            echo "<script>alert('New password and confirmation do not match.');</script>";
         }
     }
 ?>

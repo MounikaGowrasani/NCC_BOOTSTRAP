@@ -335,3 +335,18 @@
   }
 
 })();
+document.getElementById("update-password-button").addEventListener("click", function() {
+  showPasswordForm();
+});
+
+// Function to display the password form dialog
+function showPasswordForm() {
+  var modal = document.getElementById("password-form");
+  modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+  var modal = document.getElementById("password-form");
+  modal.style.display = "none";
+}
