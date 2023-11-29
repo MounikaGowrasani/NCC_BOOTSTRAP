@@ -273,7 +273,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     //session_start();
     // Check if it's the 1st day of the month
     $username = $_SESSION['uname'];
-    if (date('j') == 1 or date('j')== 24 ) {
+    if (date('j') == 1 or date('j')== 15 ) {
         
         $feedback = $_POST["feedback"];
         $rating = $_POST["rating"];
