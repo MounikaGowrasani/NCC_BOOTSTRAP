@@ -106,7 +106,7 @@ body::before {
                
                 
             </div >
-            <a href="/NCC_MAIN/NCC_ENROLL/enroll.html" style="float: right; color: #331;  transition: color 0.3s ease;">Enroll here</a>
+            <a href="/NCC_BOOTSRAP/NCC_ENROLL/enroll.html" style="float: right; color: #331;  transition: color 0.3s ease;">Enroll here</a>
 <br>           
           
             <input type="submit" name="submit" value="Submit">
