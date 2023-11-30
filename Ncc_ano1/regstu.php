@@ -18,7 +18,42 @@ include 'updatepassword.php';
   <title>Users / Profile - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+<style>
+        /* Style the modal */
+        .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
+/* Style the modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    margin: 15% auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+  </style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -100,11 +135,10 @@ include 'updatepassword.php';
             <li>
               <hr class="dropdown-divider">
             </li>
-
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.php">
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
+                <span >Change password</span>
               </a>
             </li>
             <li>
@@ -112,9 +146,9 @@ include 'updatepassword.php';
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span >Log Out</span>
               </a>
             </li>
 
