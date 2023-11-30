@@ -264,7 +264,7 @@ if (isset($_SESSION['uname'])) {
           </li>
           
           <li>
-            <a href="components-list-group.php">
+            <a href="eventss.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
