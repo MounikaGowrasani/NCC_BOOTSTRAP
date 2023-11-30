@@ -1,3 +1,7 @@
+<?php
+require('dbcon.php');
+?>
+<?php include 'session.php';?>
 
 
 <!DOCTYPE html>
@@ -7,7 +11,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / List Group - NiceAdmin Bootstrap Template</title>
+  <title>Tables / Data - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -31,6 +35,13 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Nov 17 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 </head>
 
 <body>
@@ -193,32 +204,30 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>List Group</h1>
+      <h1>Data Tables</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">Components</li>
-          <li class="breadcrumb-item active">List Group</li>
+          <li class="breadcrumb-item">Tables</li>
+          <li class="breadcrumb-item active">Data</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
     <section class="section">
       <div class="row">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
           <div class="card">
             <div class="card-body">
-              <h5 class="card-title">Default List Group</h5>
-
-          
+            
+             
+              <iframe  src="confirmed_stu.php" id="confirmedstudents" width=100%" height="700px" frameborder="0"></iframe>
 
             </div>
           </div>
+
         </div>
-
-      
-
       </div>
     </section>
 

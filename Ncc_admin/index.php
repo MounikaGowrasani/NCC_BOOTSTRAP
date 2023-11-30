@@ -185,7 +185,7 @@ require('dbcon.php');
             </a>
           </li>
           <li>
-            <a href="tables-data.php">
+            <a href="finalized_students.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
