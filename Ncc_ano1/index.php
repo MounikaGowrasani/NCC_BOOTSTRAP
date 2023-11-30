@@ -282,7 +282,7 @@ if (isset($_SESSION['uname'])) {
             </a>
           </li>
           <li>
-            <a href="forms-layouts.php">
+            <a href="view_campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
