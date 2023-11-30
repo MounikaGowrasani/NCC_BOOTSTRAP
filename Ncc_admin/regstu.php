@@ -1,7 +1,7 @@
 <?php
-require('dbcon.php');
+require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php';?>
+<?php 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/session.php'?>
 <?php
 ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
 

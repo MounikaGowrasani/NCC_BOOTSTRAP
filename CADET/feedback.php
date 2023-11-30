@@ -1,7 +1,7 @@
 <?php
-require('dbcon.php');
+require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php';?>
+<?php 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/session.php'?>
 <?php include 'updatepassword.php';?>
 <!DOCTYPE html>
 <html lang="en">
@@ -266,7 +266,7 @@ require('dbcon.php');
                 <center><input type="submit" value="Submit"></center>
             </form>
             <?php
-require 'dbcon.php';
+require 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';
 
 // Process form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
