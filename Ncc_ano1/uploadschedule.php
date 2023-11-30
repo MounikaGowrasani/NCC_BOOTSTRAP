@@ -58,7 +58,7 @@ include 'updatepassword.php';
 <i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="index.php" class="logo d-flex align-items-center">
     <img src="assets/img/ncclogo-removebg-preview.png" alt="">
-    <span class="d-none d-lg-block">Cadet</span>
+    <span class="d-none d-lg-block">ANO-1</span>
   </a>
   
 </div><!-- End Logo -->
