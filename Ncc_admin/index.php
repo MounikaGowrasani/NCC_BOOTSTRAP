@@ -157,7 +157,7 @@ require('dbcon.php');
           </li>
           
           <li>
-            <a href="view_events.php">
+            <a href="eventss.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
