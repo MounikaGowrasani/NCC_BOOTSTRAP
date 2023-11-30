@@ -26,8 +26,7 @@ if (isset($_SESSION['uname'])) {
     // Close the result set
     $result->close();
     
-    // Close the database connection
-    $conn->close();
+   
 }
  else
     echo "log out";

@@ -180,7 +180,7 @@ require('dbcon.php');
             </a>
           </li>
           <li>
-            <a href="registered_students.php">
+            <a href="regstu.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
