@@ -31,6 +31,7 @@ require('dbcon.php');
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="/NCC_BOOTSTRAP/CADET/assets/css/style.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
   <!-- =======================================================
@@ -179,7 +180,7 @@ if (isset($_SESSION['uname'])) {
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
+            <img src="/NCC_BOOTSTRAP/CADET/assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
             <span>Siva Koteswara Rao</span>
           </a><!-- End Profile Iamge Icon -->
 
@@ -207,7 +208,7 @@ if (isset($_SESSION['uname'])) {
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout.php">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span >Log Out</span>
               </a>
@@ -239,7 +240,7 @@ if (isset($_SESSION['uname'])) {
     <li class="nav-heading">Dashboard</li>
 
     <li class="nav-item">
-        <a class="nav-link collapsed" href="components-tooltips.php">
+        <a class="nav-link collapsed" href="uploadschedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
