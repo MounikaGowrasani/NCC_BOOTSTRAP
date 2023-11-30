@@ -109,8 +109,9 @@ body::before {
 
           
           
-            <input type="submit" name="submit" value="Submit"><br>
-            <a href="/NCC_BOOTSRAP/NCC_ENROLL/enroll.html" style=" color: blue;  align-item: center; transition: color 0.3s ease;">Not a member,enroll here</a>
+            <input type="submit" name="submit" value="Submit">
+            <br><br>
+            <center><a href="/NCC_BOOTSTRAP/NCC_ENROLL/enroll.html" style=" color: blue;transition: color 0.3s ease;">Not a member,enroll here &#x2794;</a></center>
         </form>
     </div>
 </body>

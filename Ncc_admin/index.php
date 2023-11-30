@@ -133,13 +133,13 @@ require('dbcon.php');
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="components-tooltips.php">
+        <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="regment.php">
+        <a class="nav-link collapsed" href="enrolled_students.php">
           <i class="bi bi-person"></i>
           <span>Enrolled Students</span>
         </a>
@@ -151,13 +151,13 @@ require('dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.php">
+            <a href="add_events.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
           
           <li>
-            <a href="components-list-group.php">
+            <a href="view_events.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
@@ -170,7 +170,7 @@ require('dbcon.php');
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.php">
+            <a href="add_camps.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
@@ -180,7 +180,7 @@ require('dbcon.php');
             </a>
           </li>
           <li>
-            <a href="components-tooltips.php">
+            <a href="registered_students.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
@@ -192,9 +192,9 @@ require('dbcon.php');
         </ul>
       </li><!-- End Forms Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
+        <a class="nav-link collapsed" href="feed_back.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
     </ul>
