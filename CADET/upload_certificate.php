@@ -210,9 +210,9 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       <li class="nav-item">
         <a class="nav-link collapsed" href="faq.html">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="contact.html">

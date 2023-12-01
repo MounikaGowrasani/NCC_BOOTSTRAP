@@ -214,7 +214,7 @@ include 'updatepassword.php';
             </a>
           </li>
           <li>
-            <a href="forms-layouts.php">
+            <a href="view_campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
@@ -235,7 +235,7 @@ include 'updatepassword.php';
           <i class="bi bi-question-circle"></i>
           <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->

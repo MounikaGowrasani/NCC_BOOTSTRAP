@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / F.A.Q - NiceAdmin Bootstrap Template</title>
+  <title>Pages / View Feedback - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -91,7 +91,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.php">
+              <a class="dropdown-item d-flex align-items-center" href="feed_back.php">
                 <i class="bi bi-question-circle"></i>
                 <span>Need Help?</span>
               </a>
@@ -145,13 +145,13 @@
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.php">
+            <a href="add_events.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
           
           <li>
-            <a href="components-list-group.php">
+            <a href="eventss.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
@@ -164,12 +164,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.php">
+            <a href="add_camps.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.php">
+            <a href="view_campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
@@ -186,11 +186,11 @@
         </ul>
       </li><!-- End Forms Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
+        <a class="nav-link collapsed" href="feed_back.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->
@@ -234,7 +234,7 @@
             </div>
           </div>
 
-          <!-- F.A.Q Group 1 -->
+          <!-- View Feedback Group 1 -->
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Laborum dolorem quam porro</h5>
@@ -309,13 +309,13 @@
               </div>
 
             </div>
-          </div><!-- End F.A.Q Group 1 -->
+          </div><!-- End View Feedback Group 1 -->
 
         </div>
 
         <div class="col-lg-6">
 
-          <!-- F.A.Q Group 2 -->
+          <!-- View Feedback Group 2 -->
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Deserunt ut unde corporis</h5>
@@ -390,9 +390,9 @@
               </div>
 
             </div>
-          </div><!-- End F.A.Q Group 2 -->
+          </div><!-- End View Feedback Group 2 -->
 
-          <!-- F.A.Q Group 3 -->
+          <!-- View Feedback Group 3 -->
           <div class="card">
             <div class="card-body">
               <h5 class="card-title">Dolore occaecati ducimus quam</h5>
@@ -467,7 +467,7 @@
               </div>
 
             </div>
-          </div><!-- End F.A.Q Group 3 -->
+          </div><!-- End View Feedback Group 3 -->
 
         </div>
 

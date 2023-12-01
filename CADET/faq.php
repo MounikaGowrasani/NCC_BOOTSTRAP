@@ -10,7 +10,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Pages / F.A.Q - NiceAdmin Bootstrap Template</title>
+  <title>Pages / View Feedback - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -209,9 +209,9 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       <li class="nav-item">
         <a class="nav-link collapsed" href="faq.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="contact.php">
@@ -231,7 +231,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">F.A.Q</li>
+          <li class="breadcrumb-item active">View Feedback</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -242,7 +242,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
         
 
-          <!-- F.A.Q Group 1 -->
+          <!-- View Feedback Group 1 -->
           <div class="card">
             <div class="card-body">
  
@@ -396,7 +396,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
               </div>
 
             </div>
-          </div><!-- End F.A.Q Group 1 -->
+          </div><!-- End View Feedback Group 1 -->
 
         </div>
 

@@ -89,7 +89,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.php">
+              <a class="dropdown-item d-flex align-items-center" href="feed_back.php">
                 <i class="bi bi-question-circle"></i>
                 <span>Need Help?</span>
               </a>
@@ -143,13 +143,13 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.php">
+            <a href="add_events.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
           
           <li>
-            <a href="components-list-group.php">
+            <a href="eventss.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
@@ -162,12 +162,12 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.php">
+            <a href="add_camps.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.php">
+            <a href="view_campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
@@ -184,11 +184,11 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </ul>
       </li><!-- End Forms Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
+        <a class="nav-link collapsed" href="feed_back.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->

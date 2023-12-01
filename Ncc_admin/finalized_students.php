@@ -209,7 +209,7 @@ color: #f00;
       <i class="bi bi-question-circle"></i>
       <span>View Feedback</span>
     </a>
-  </li><!-- End F.A.Q Page Nav -->
+  </li><!-- End View Feedback Page Nav -->
 </ul>
 
 </aside><!-- End Sidebar-->

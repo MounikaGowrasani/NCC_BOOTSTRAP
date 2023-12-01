@@ -262,7 +262,7 @@ if (isset($_SESSION['uname'])) {
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="components-alerts.php">
+            <a href="add_events.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
@@ -281,7 +281,7 @@ if (isset($_SESSION['uname'])) {
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.php">
+            <a href="add_camps.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
@@ -303,11 +303,11 @@ if (isset($_SESSION['uname'])) {
         </ul>
       </li><!-- End Forms Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
+        <a class="nav-link collapsed" href="feed_back.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
     </ul>
 
   </aside><!-- End Sidebar-->

@@ -309,9 +309,9 @@ if (isset($_SESSION['uname'])) {
       <li class="nav-item">
         <a class="nav-link collapsed" href="faq.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
-      </li><!-- End F.A.Q Page Nav -->
+      </li><!-- End View Feedback Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="contact.php">
