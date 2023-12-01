@@ -36,6 +36,43 @@
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+
+/* Style the modal */
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style the modal content */
+.modal-content {
+background-color: #fff;
+padding: 20px;
+width: 500px;
+margin: 15% auto;
+border: 1px solid #333;
+border-radius: 5px;
+position: relative;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+top: 0;
+right: 0;
+padding: 5px 10px;
+cursor: pointer;
+}
+
+.close:hover {
+color: #f00;
+}
+</style>
 </head>
 
 <body>
@@ -43,11 +80,12 @@
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
+    <i class="bi bi-list toggle-sidebar-btn"></i>
       <a href="index.php" class="logo d-flex align-items-center">
       
         <span class="d-none d-lg-block">NCCAdmin</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+      
     </div><!-- End Logo -->
 
 
@@ -58,13 +96,13 @@
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            <span class="d-none d-md-block dropdown-toggle ps-2">Siva Koteswara rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6>Siva Koteswara rao</h6>
+              <span>Admin</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -108,13 +146,13 @@
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="components-tooltips.php">
+        <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="tables-data.php">
+        <a class="nav-link collapsed" href="enrolled_students.php">
           <i class="bi bi-person"></i>
           <span>Enrolled Students</span>
         </a>
@@ -155,12 +193,12 @@
             </a>
           </li>
           <li>
-            <a href="components-tooltips.php">
+            <a href="schedule.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="tables-data.php">
+            <a href="enrolled_students.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
@@ -234,6 +272,20 @@
 
        
       </div>
+      <div id="password-form" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePasswordForm()">&times;</span>
+        <form method="post" action="">
+            <label for="new_password">New Password:</label>
+            <input type="password" name="new_password" required><br>
+            <br>
+            <label for="confirm_new_password">Confirm New Password:</label>
+            <input  type="password" name="confirm_new_password" required><br>
+            <br>
+            <input  type="submit" class="update_password" name="update_password" value="Save Password">
+        </form>
+    </div>
+</div>
     </section>
 
   </main><!-- End #main -->

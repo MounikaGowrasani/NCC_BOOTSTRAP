@@ -127,13 +127,13 @@
         </a>
       </li><!-- End Dashboard Nav -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="components-tooltips.php">
+        <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="tables-data.php">
+        <a class="nav-link collapsed" href="enrolled_students.php">
           <i class="bi bi-person"></i>
           <span>Enrolled Students</span>
         </a>
@@ -174,12 +174,12 @@
             </a>
           </li>
           <li>
-            <a href="components-tooltips.php">
+            <a href="schedule.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="tables-data.php">
+            <a href="enrolled_students.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
