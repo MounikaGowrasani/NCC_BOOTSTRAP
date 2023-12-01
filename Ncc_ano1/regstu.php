@@ -2,7 +2,12 @@
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
 <?php 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/session.php'?>
-<?php include 'updatepassword.php';?>
+<?php
+ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
+
+// Now, include the file without specifying an absolute path
+include 'updatepassword.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,10 +15,45 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Cards - NiceAdmin Bootstrap Template</title>
+  <title>Users / Profile - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+<style>
+        /* Style the modal */
+        .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
+/* Style the modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    margin: 15% auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+  </style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -45,60 +85,56 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
 <body>
 
-
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-    <i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
       <a href="index.php" class="logo d-flex align-items-center">
-        <img src="assets/img/ncclogo-removebg-preview.png" alt="">
-        <span class="d-none d-lg-block">Cadet</span>
+      
+        <span class="d-none d-lg-block">NCCAdmin</span>
       </a>
-    
+      <i class="bi bi-list toggle-sidebar-btn"></i>
     </div><!-- End Logo -->
 
-    
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" >
-          <span class="d-none d-lg-block">Home</span>
-           
-          </a><!-- End Notification Icon -->
-
-         
-
-        </li><!-- End Notification Nav -->
-
-        
-
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span><?php echo $username; ?></span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6><?php echo $studentName; ?></h6>
-              <span>Reg no: <?php echo $regno; ?></span><br>
-              <span>Mobile no: <?php echo $mno; ?></span>
+              <h6><?php echo $username; ?></h6>
+              <span>Web Designer</span>
             </li>
-            
-
-           
             <li>
               <hr class="dropdown-divider">
             </li>
 
-          
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
+                <i class="bi bi-person"></i>
+                <span>My Profile</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
+            <li>
+              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
+                <i class="bi bi-gear"></i>
+                <span>Account Settings</span>
+              </a>
+            </li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
             <li>
               <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
@@ -110,7 +146,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout.php">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span >Log Out</span>
               </a>
@@ -128,190 +164,149 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.php" class="logo d-flex align-items-center">
-
-        
-        
-      </a>
-     
-    </div>
-  
-    <li class="nav-heading">Dashboard</li>
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="view_schedule.php">
+        <a class="nav-link " href="index.php">
+          <i class="bi bi-grid"></i>
+          <span>Dashboard</span>
+        </a>
+      </li><!-- End Dashboard Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
-          <span> View Schedule</span>
+          <span>Schedule</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="eventss.php">
+        <a class="nav-link collapsed" href="enrolled_students.php">
           <i class="bi bi-person"></i>
-          <span>View Events</span>
+          <span>Enrolled Students</span>
         </a>
       </li>
-  
-
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="campss.php">
+            <a href="add_events.php">
+              <i class="bi bi-circle"></i><span>Add Events</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="view_events.php">
+              <i class="bi bi-circle"></i><span>View Events</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add_camps.php">
+              <i class="bi bi-circle"></i><span>Add Camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="forms-layouts.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
           <li>
-            <a href="registered_camps.php">
-              <i class="bi bi-circle"></i><span>Registered Camps</span>
-            </a>
-          </li>
-         
-        </ul>
-      </li><!-- End Components Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="feedback.php">
-          <i class="bi bi-person"></i>
-          <span>Feedback</span>
-        </a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>About NCC</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="motto.php">
-              <i class="bi bi-circle"></i><span>Motto of NCC</span>
+            <a href="regstu.php">
+              <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="pledge.php">
-              <i class="bi bi-circle"></i><span>Pledge</span>
-            </a>
-          </li>
-          <li>
-            <a href="ncc_flag.php">
-              <i class="bi bi-circle"></i><span>NCC Flag</span>
-            </a>
-          </li>
-          <li>
-            <a href="ncc_song.php">
-              <i class="bi bi-circle"></i><span>NCC Song</span>
+            <a href="tables-data.php">
+              <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
         </ul>
       </li><!-- End Forms Nav -->
-
       <li class="nav-item">
-        <a class="nav-link collapsed" href="faq.php">
+        <a class="nav-link collapsed" href="feed_back.php">
           <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
+          <span>View Feedback</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="contact.php">
-          <i class="bi bi-envelope"></i>
-          <span>Contact</span>
-        </a>
-      </li><!-- End Contact Page Nav -->
-
     </ul>
 
   </aside><!-- End Sidebar-->
 
+
   <main id="main" class="main">
 
-    <div class="pagetitle">
-      <h1>Feedback</h1>
+  <div class="pagetitle">
+      <h1>Events</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Feedback</li>
+          <li class="breadcrumb-item active">Schedule</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
+    <section class="section profile">
     <section class="section">
-      <div class="row align-items-top">
-        <div class="col-lg-6">
 
-          <!-- Default Card -->
-          <div class="card">
-            <div class="card-body">
-              <form action="feedback.php" method="POST">
+          <!-- PDF will be displayed here -->
+          <iframe  src="confirmed_students.php" id="registered_students" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
+     
 
-               
-                <br>
-                
-                <label for="feedback">Provide Feedback:</label>
-                <textarea id="feedback" name="feedback" rows="4" cols="50" required></textarea>
-                <br><br>
-                <label for="rating">Rating :</label>
-                <select id="rating" name="rating" required>
-                    <option value="-1">select rating</option>
-                    <option value="1(poor)">1 (Poor)</option>
-                    <option value="2(fair)">2 (Fair)</option>
-                    <option value="3(average)">3 (Average)</option>
-                    <option value="4(good)">4 (Good)</option>
-                    <option value="5(excellent)">5 (Excellent)</option>
-                </select>
-                <br>
-                <br>
-                <center><input type="submit" value="Submit"></center>
-            </form>
-            <?php
-require 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';
 
-// Process form submission
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    //session_start();
-    // Check if it's the 1st day of the month
-    $username = $_SESSION['uname'];
-    if (date('j') == 1 or date('j')== 15 ) {
+
+</body>
+</html>
+
+    </section>
+
         
-        $feedback = $_POST["feedback"];
-        $rating = $_POST["rating"];
-        $feedbackdate = date('Y-m-d');
-        // Insert the data into the database
-        $sql = "INSERT INTO feedback (regno, feedback, rating, feedbackdate) VALUES ('$username', '$feedback', '$rating', '$feedbackdate')";
-        if ($conn->query($sql) === TRUE) {
-          echo '<script>alert("Feedback submitted successfully!");</script>';
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
-        }
-    } else {
-        // It's not the 1st day of the month, display an alert
-        echo '<script>alert("Feedback can only be submitted on the 1st & 15th of each month.");</script>';
-        echo '<script>window.location.href = "feedback.php";</script>';
-    }
-}
 
-// Close the database connection
-$conn->close();
-?>
+                <div class="tab-pane fade pt-3" id="profile-change-password">
+                  <!-- Change Password Form -->
+                  <form>
+
+                    <div class="row mb-3">
+                      <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="password" type="password" class="form-control" id="currentPassword">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="newpassword" type="password" class="form-control" id="newPassword">
+                      </div>
+                    </div>
+
+                    <div class="row mb-3">
+                      <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
+                      <div class="col-md-8 col-lg-9">
+                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
+                      </div>
+                    </div>
+
+                    <div class="text-center">
+                      <button type="submit" class="btn btn-primary">Change Password</button>
+                    </div>
+                  </form><!-- End Change Password Form -->
+
+                </div>
+
+              </div><!-- End Bordered Tabs -->
+
             </div>
-          </div><!-- End Default Card -->
-
-       
-
-         
+          </div>
 
         </div>
-
-        <div class="col-lg-3">
-
-       
- 
-        </div>
-
-       
-
       </div>
       <div id="password-form" class="modal" style="display:none;">
     <div class="modal-content">
@@ -332,7 +327,7 @@ $conn->close();
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
+  <footer id="footer" class="footer ">
     <div class="copyright">
       &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
     </div>
@@ -376,6 +371,7 @@ function closePasswordForm() {
     modal.style.display = "none";
 }
   </script>
+  
 </body>
 
 </html>

@@ -1,7 +1,7 @@
 <?php
-require('dbcon.php');
+require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php';?>
+<?php 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/session.php'?>
 <?php
 ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
 
@@ -18,7 +18,42 @@ include 'updatepassword.php';
   <title>Users / Profile - NiceAdmin Bootstrap Template</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
+  <style>
+        /* Style the modal */
+        .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
 
+/* Style the modal content */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 500px;
+    margin: 15% auto;
+    border: 1px solid #333;
+    border-radius: 5px;
+    position: relative;
+}
+
+/* Style the close button */
+.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #f00;
+}
+  </style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">

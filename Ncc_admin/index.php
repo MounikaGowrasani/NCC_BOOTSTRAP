@@ -1,7 +1,7 @@
 <?php
-require('dbcon.php');
+require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php';?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -176,7 +176,7 @@ require('dbcon.php');
             </a>
           </li>
           <li>
-            <a href="forms-layouts.php">
+            <a href="view_campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>

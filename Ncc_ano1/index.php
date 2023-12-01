@@ -1,6 +1,10 @@
+
 <?php
-require('dbcon.php');
+
+require  'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';
 ?>
+
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -282,12 +286,12 @@ if (isset($_SESSION['uname'])) {
             </a>
           </li>
           <li>
-            <a href="forms-layouts.php">
+            <a href="view_campss.php">
               <i class="bi bi-circle"></i><span>View Camps</span>
             </a>
           </li>
           <li>
-            <a href="components-tooltips.php">
+            <a href="regstu.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
@@ -323,7 +327,7 @@ if (isset($_SESSION['uname'])) {
 <div class="col-12">
               <div class="card">
                 <div class="card-body">
-                  <center><img src="assets/img/10.jpeg" alt="" style="width:100%;height:70vh;"></center>
+                  <center><img src="/NCC_BOOTSTRAP/CADET/assets/img/10.jpeg" alt="" style="width:100%;height:70vh;"></center>
                 </div>
 
               </div>

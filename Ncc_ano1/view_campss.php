@@ -228,7 +228,7 @@ include 'updatepassword.php';
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
+          <iframe  src="view_camps.php" id="events" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
      
 
 
