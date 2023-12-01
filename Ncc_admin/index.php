@@ -235,6 +235,15 @@ color: #f00;
         </ol>
       </nav>
     </div><!-- End Page Title -->
+    <!-- Reports -->
+<div class="col-12">
+              <div class="card">
+                <div class="card-body">
+                  <center><img src="/NCC_BOOTSTRAP/CADET/assets/img/10.jpeg" alt="" style="width:100%;height:70vh;"></center>
+                </div>
+
+              </div>
+            </div><!-- End Reports -->
     </div>
       <div id="password-form" class="modal" style="display:none;">
     <div class="modal-content">
