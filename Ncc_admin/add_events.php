@@ -225,9 +225,9 @@
         <label for="eventType">Event Type:</label>
         
         <select id="eventType" name="eventType">
-            <option value="Conference">Institution</option>
-            <option value="Workshop">State
-            <option value="Seminar">National</option>
+            <option value="Institution">Institution</option>
+            <option value="State">State</option>
+            <option value="National">National</option>
         </select>
        <br><br>
         <label for="startDate">From Date:</label>
