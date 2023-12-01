@@ -672,12 +672,14 @@ h6 {
 }
 
 .sidebar-nav .nav-heading {
-  font-size: 11px;
+  font-size: 17px;
   text-transform: uppercase;
-  color: #899bbd;
-  font-weight: 600;
+  color: #39393a;
+  font-weight: bold;
   margin: 10px 0 5px 15px;
+  text-decoration: underline;
 }
+
 
 .sidebar-nav .nav-link {
   display: flex;

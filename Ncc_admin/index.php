@@ -41,6 +41,43 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+
+/* Style the modal */
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style the modal content */
+.modal-content {
+background-color: #fff;
+padding: 20px;
+width: 500px;
+margin: 15% auto;
+border: 1px solid #333;
+border-radius: 5px;
+position: relative;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+top: 0;
+right: 0;
+padding: 5px 10px;
+cursor: pointer;
+}
+
+.close:hover {
+color: #f00;
+}
+</style>
 </head>
 
 <body>
@@ -66,42 +103,25 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span><?php echo $username; ?></span>
+            <span>Siva Koteswarrao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6><?php echo $username; ?></h6>
-              <span>Web Designer</span>
+              <h6>Siva Koteswarrao</h6>
+              <span>Admin</span>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
+           
+           
+         
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.php">
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
+                <span >Change password</span>
               </a>
             </li>
             <li>
@@ -109,9 +129,9 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span >Log Out</span>
               </a>
             </li>
 
@@ -128,11 +148,9 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-      <li class="nav-item">
-        <a class="nav-link " href="index.php">
-          <span><b><u>DASHBOARD</u></b></span>
-        </a>
-      </li><!-- End Dashboard Nav -->
+    <li class="nav-heading">Dashboard</li>
+
+    
       <li class="nav-item">
         <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
@@ -215,7 +233,21 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </ol>
       </nav>
     </div><!-- End Page Title -->
-
+    </div>
+      <div id="password-form" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePasswordForm()">&times;</span>
+        <form method="post" action="">
+            <label for="new_password">New Password:</label>
+            <input type="password" name="new_password" required><br>
+            <br>
+            <label for="confirm_new_password">Confirm New Password:</label>
+            <input  type="password" name="confirm_new_password" required><br>
+            <br>
+            <input  type="submit" class="update_password" name="update_password" value="Save Password">
+        </form>
+    </div>
+</div>
 
   </main><!-- End #main -->
 
@@ -247,6 +279,23 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  document.getElementById("update-password-button").addEventListener("click", function() {
+    showPasswordForm();
+});
+
+// Function to display the password form dialog
+function showPasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "none";
+}
+  </script>
 
 </body>
 
