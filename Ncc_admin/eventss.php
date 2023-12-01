@@ -58,7 +58,7 @@ include 'updatepassword.php';
 <i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="index.php" class="logo d-flex align-items-center">
     <img src="assets/img/ncclogo-removebg-preview.png" alt="">
-    <span class="d-none d-lg-block">ANO-1</span>
+    <span class="d-none d-lg-block">NCCAdmin</span>
   </a>
   
 </div><!-- End Logo -->
@@ -91,7 +91,8 @@ include 'updatepassword.php';
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Siva Koteswara Rao</h6>
+              <h6>Siva Koteswarrao</h6>
+              <span>Admin</span>
               <br>
               <span>Mobile no: 8764485416</span>
             </li>

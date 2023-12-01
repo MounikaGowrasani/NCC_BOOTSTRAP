@@ -77,30 +77,11 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
               <hr class="dropdown-divider">
             </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="pages-faq.php">
+             
+           <li>
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
+                <span >Change password</span>
               </a>
             </li>
             <li>
@@ -108,9 +89,9 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span >Log Out</span>
               </a>
             </li>
 
@@ -281,7 +262,23 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  document.getElementById("update-password-button").addEventListener("click", function() {
+    showPasswordForm();
+});
 
+// Function to display the password form dialog
+function showPasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "none";
+}
+  </script>
 </body>
 
 </html>

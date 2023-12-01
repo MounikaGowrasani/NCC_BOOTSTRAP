@@ -110,6 +110,8 @@ color: #f00;
             <li class="dropdown-header">
               <h6>Siva Koteswarrao</h6>
               <span>Admin</span>
+              <br>
+              <span>Mobile no: 8764485416</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -150,7 +152,7 @@ color: #f00;
 
     <li class="nav-heading">Dashboard</li>
 
-    
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
