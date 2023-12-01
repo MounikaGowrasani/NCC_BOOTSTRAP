@@ -1,7 +1,6 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php'?>
 <?php
 ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
 
@@ -229,7 +228,7 @@ include 'updatepassword.php';
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
+          <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="100%" frameborder="0" ></iframe>
      
 
 

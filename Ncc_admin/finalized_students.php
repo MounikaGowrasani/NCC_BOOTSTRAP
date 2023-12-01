@@ -1,7 +1,6 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php'?>
 
 
 <!DOCTYPE html>
@@ -138,81 +137,82 @@ color: #f00;
 
   </header><!-- End Header -->
 
-  <!-- ======= Sidebar ======= -->
-  <aside id="sidebar" class="sidebar">
+    <!-- ======= Sidebar ======= -->
+    <aside id="sidebar" class="sidebar">
 
-    <ul class="sidebar-nav" id="sidebar-nav">
+<ul class="sidebar-nav" id="sidebar-nav">
 
-    <li class="nav-heading">Dashboard</li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="schedule.php">
-          <i class="bi bi-person"></i>
-          <span>Schedule</span>
+<li class="nav-heading">Dashboard</li>
+
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="schedule.php">
+      <i class="bi bi-person"></i>
+      <span>Schedule</span>
+    </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="enrolled_students.php">
+      <i class="bi bi-person"></i>
+      <span>Enrolled Students</span>
+    </a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="add_events.php">
+          <i class="bi bi-circle"></i><span>Add Events</span>
         </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="enrolled_students.php">
-          <i class="bi bi-person"></i>
-          <span>Enrolled Students</span>
+      
+      <li>
+        <a href="eventss.php">
+          <i class="bi bi-circle"></i><span>View Events</span>
         </a>
       </li>
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="components-alerts.php">
-              <i class="bi bi-circle"></i><span>Add Events</span>
-            </a>
-          </li>
-          
-          <li>
-            <a href="components-list-group.php">
-              <i class="bi bi-circle"></i><span>View Events</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Components Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="forms-elements.php">
-              <i class="bi bi-circle"></i><span>Add Camps</span>
-            </a>
-          </li>
-          <li>
-            <a href="forms-layouts.php">
-              <i class="bi bi-circle"></i><span>View Camps</span>
-            </a>
-          </li>
-          <li>
-            <a href="schedule.php">
-              <i class="bi bi-circle"></i><span>Registered students for camps</span>
-            </a>
-          </li>
-          <li>
-            <a href="enrolled_students.php">
-              <i class="bi bi-circle"></i><span>Finalized students for camps</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Forms Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="pages-faq.php">
-          <i class="bi bi-question-circle"></i>
-          <span>F.A.Q</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
     </ul>
+  </li><!-- End Components Nav -->
 
-  </aside><!-- End Sidebar-->
+  <li class="nav-item">
+    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+      <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
+    </a>
+    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+      <li>
+        <a href="add_camps.php">
+          <i class="bi bi-circle"></i><span>Add Camps</span>
+        </a>
+      </li>
+      <li>
+        <a href="view_campss.php">
+          <i class="bi bi-circle"></i><span>View Camps</span>
+        </a>
+      </li>
+      <li>
+        <a href="regstu.php">
+          <i class="bi bi-circle"></i><span>Registered students for camps</span>
+        </a>
+      </li>
+      <li>
+        <a href="finalized_students.php">
+          <i class="bi bi-circle"></i><span>Finalized students for camps</span>
+        </a>
+      </li>
+    </ul>
+  </li><!-- End Forms Nav -->
+  <li class="nav-item">
+    <a class="nav-link collapsed" href="feed_back.php">
+      <i class="bi bi-question-circle"></i>
+      <span>View Feedback</span>
+    </a>
+  </li><!-- End F.A.Q Page Nav -->
+</ul>
 
+</aside><!-- End Sidebar-->
   <main id="main" class="main">
 
     <div class="pagetitle">

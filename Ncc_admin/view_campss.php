@@ -1,7 +1,6 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php'?>
 <?php
 ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
 
@@ -55,10 +54,10 @@ include 'updatepassword.php';
  <header id="header" class="header fixed-top d-flex align-items-center">
 
 <div class="d-flex align-items-center justify-content-between">
-<i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;
   <a href="index.php" class="logo d-flex align-items-center">
     <img src="assets/img/ncclogo-removebg-preview.png" alt="">
-    <span class="d-none d-lg-block">ANO-1</span>
+    <span class="d-none d-lg-block">NCC ADMIN</span>
   </a>
   
 </div><!-- End Logo -->
@@ -85,13 +84,14 @@ include 'updatepassword.php';
     <li class="nav-item dropdown pe-3">
 
     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="/NCC_BOOTSTRAP/CADET/assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
-            <span>Siva Koteswara Rao</span>
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span>Siva Koteswarrao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Siva Koteswara Rao</h6>
+              <h6>Siva Koteswarrao</h6>
+              <span>Admin</span>
               <br>
               <span>Mobile no: 8764485416</span>
             </li>
@@ -128,89 +128,82 @@ include 'updatepassword.php';
 </header><!-- End Header -->
 
 
- <!-- ======= Sidebar ======= -->
- <aside id="sidebar" class="sidebar">
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
 
-<ul class="sidebar-nav" id="sidebar-nav">
-<div class="d-flex align-items-center justify-content-between">
-  <a href="index.php" class="logo d-flex align-items-center">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-    
-    
-  </a>
- 
-</div>
+    <li class="nav-heading">Dashboard</li>
 
-<li class="nav-heading">Dashboard</li>
 
-<li class="nav-item">
-    <a class="nav-link collapsed" href="uploadschedule.php">
-      <i class="bi bi-person"></i>
-      <span>Schedule</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="enrolled_students.php">
-      <i class="bi bi-person"></i>
-      <span>Enrolled Students</span>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
-    </a>
-    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      <li>
-        <a href="components-alerts.php">
-          <i class="bi bi-circle"></i><span>Add Events</span>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="schedule.php">
+          <i class="bi bi-person"></i>
+          <span>Schedule</span>
         </a>
       </li>
-      
-      <li>
-        <a href="components-list-group.php">
-          <i class="bi bi-circle"></i><span>View Events</span>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="enrolled_students.php">
+          <i class="bi bi-person"></i>
+          <span>Enrolled Students</span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add_events.php">
+              <i class="bi bi-circle"></i><span>Add Events</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="eventss.php">
+              <i class="bi bi-circle"></i><span>View Events</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add_camps.php">
+              <i class="bi bi-circle"></i><span>Add Camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="view_campss.php">
+              <i class="bi bi-circle"></i><span>View Camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="regstu.php">
+              <i class="bi bi-circle"></i><span>Registered students for camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="finalized_students.php">
+              <i class="bi bi-circle"></i><span>Finalized students for camps</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="feed_back.php">
+          <i class="bi bi-question-circle"></i>
+          <span>View Feedback</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
     </ul>
-  </li><!-- End Components Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
-    </a>
-    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      <li>
-        <a href="forms-elements.php">
-          <i class="bi bi-circle"></i><span>Add Camps</span>
-        </a>
-      </li>
-      <li>
-        <a href="forms-layouts.php">
-          <i class="bi bi-circle"></i><span>View Camps</span>
-        </a>
-      </li>
-      <li>
-        <a href="schedule.php">
-          <i class="bi bi-circle"></i><span>Registered students for camps</span>
-        </a>
-      </li>
-      <li>
-        <a href="enrolled_students.php">
-          <i class="bi bi-circle"></i><span>Finalized students for camps</span>
-        </a>
-      </li>
-    </ul>
-  </li><!-- End Forms Nav -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="pages-faq.php">
-      <i class="bi bi-question-circle"></i>
-      <span>F.A.Q</span>
-    </a>
-  </li><!-- End F.A.Q Page Nav -->
-</ul>
-
-</aside><!-- End Sidebar-->
+  </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
