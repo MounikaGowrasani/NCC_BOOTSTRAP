@@ -42,7 +42,15 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
-
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
 /* Style the modal */
 .modal {
 display: none;
@@ -232,7 +240,40 @@ color: #f00;
 
     
     <section class="section">
-    <iframe  src="retrieve.php" id="pdfViewer" width="100%" height="600" frameborder="0"></iframe>
+      <div class="row">
+        <div class="col-lg-12">
+
+          <div class="card">
+            <div class="card-body">
+              
+              <h2>Retrieve PDF</h2>
+
+              <div class="container">
+    <a href="retrieve1.php" target="_self">View ANO1(10A) Schedule</a>
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="schedule_file" accept=".pdf">
+        <input type="hidden" name="schedule_type" value="update1">
+        <button type="submit" name="update" id="update">Update Schedule</button>
+    </form>
+</div>
+<br>
+<br>
+<div class="container">
+    <a href="retrieve2.php">View ANO2(25A) Schedule</a>
+    <br>
+    <form action="" method="post" enctype="multipart/form-data">
+        <input type="file" name="schedule_file" accept=".pdf">
+        <input type="hidden" name="schedule_type" value="update2">
+        <button type="submit" name="update" id="update">Update Schedule</button>
+    </form>
+</div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
       <div id="password-form" class="modal" style="display:none;">
     <div class="modal-content">
         <span class="close" onclick="closePasswordForm()">&times;</span>
