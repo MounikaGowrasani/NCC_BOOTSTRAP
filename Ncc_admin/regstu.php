@@ -221,11 +221,12 @@ color: #f00;
   <main id="main" class="main">
 
   <div class="pagetitle">
-      <h1>Events</h1>
+      <h1>Registered students</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Schedule</li>
+          <li class="breadcrumb-item">Camps</a></li>
+          <li class="breadcrumb-item active">Registered students for camps</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

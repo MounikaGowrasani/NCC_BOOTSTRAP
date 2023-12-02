@@ -212,12 +212,12 @@ color: #f00;
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Alerts</h1>
+      <h1>Add Events</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">Components</li>
-          <li class="breadcrumb-item active">Alerts</li>
+          <li class="breadcrumb-item">Events</li>
+          <li class="breadcrumb-item active">Add Events</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

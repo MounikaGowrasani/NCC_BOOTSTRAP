@@ -215,11 +215,12 @@ include 'updatepassword.php';
   <main id="main" class="main">
 
   <div class="pagetitle">
-      <h1>Events</h1>
+      <h1> View Events</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Schedule</li>
+          <li class="breadcrumb-item">Events</a></li>
+          <li class="breadcrumb-item active">View Events</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->

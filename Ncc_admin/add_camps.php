@@ -212,12 +212,12 @@ color: #f00;
   <main id="main" class="main">
 
     <div class="pagetitle">
-    <h2>Camps Information</h2>
+    <h2>Camps</h2>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item">Forms</li>
-          <li class="breadcrumb-item active">Elements</li>
+          <li class="breadcrumb-item">Camps</li>
+          <li class="breadcrumb-item active">View Camps</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
