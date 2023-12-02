@@ -119,7 +119,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_events.php">
+            <a href="add_eventss.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
