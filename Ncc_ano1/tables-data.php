@@ -91,9 +91,9 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="feed_back.php">
+              <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
-                <span>Need Help?</span>
+                <span >Change password</span>
               </a>
             </li>
             <li>
@@ -101,9 +101,9 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span >Log Out</span>
               </a>
             </li>
 
@@ -138,7 +138,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link collapsed" href="enrolled_students.php">
+    <a class="nav-link collapsed" href="tables-data.php">
       <i class="bi bi-person"></i>
       <span>Enrolled Students</span>
     </a>
@@ -150,13 +150,13 @@
     </a>
     <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="add_events.php">
+        <a href="components-alerts.php">
           <i class="bi bi-circle"></i><span>Add Events</span>
         </a>
       </li>
       
       <li>
-        <a href="eventss.php">
+        <a href="components-list-group.php">
           <i class="bi bi-circle"></i><span>View Events</span>
         </a>
       </li>
@@ -169,33 +169,33 @@
     </a>
     <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
       <li>
-        <a href="add_camps.php">
+        <a href="forms-elements.php">
           <i class="bi bi-circle"></i><span>Add Camps</span>
         </a>
       </li>
       <li>
-        <a href="view_campss.php">
+        <a href="forms-layouts.php">
           <i class="bi bi-circle"></i><span>View Camps</span>
         </a>
       </li>
       <li>
-        <a href="schedule.php">
+        <a href="components-tooltips.php">
           <i class="bi bi-circle"></i><span>Registered students for camps</span>
         </a>
       </li>
       <li>
-        <a href="enrolled_students.php">
+        <a href="tables-data.php">
           <i class="bi bi-circle"></i><span>Finalized students for camps</span>
         </a>
       </li>
     </ul>
   </li><!-- End Forms Nav -->
   <li class="nav-item">
-    <a class="nav-link collapsed" href="feed_back.php">
+    <a class="nav-link collapsed" href="pages-faq.php">
       <i class="bi bi-question-circle"></i>
-      <span>View Feedback</span>
+      <span>F.A.Q</span>
     </a>
-  </li><!-- End View Feedback Page Nav -->
+  </li><!-- End F.A.Q Page Nav -->
 </ul>
 
   </aside><!-- End Sidebar-->
