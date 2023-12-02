@@ -169,33 +169,31 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   </aside><!-- End Sidebar-->
 
-
-
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+    <h1>Enrolled Students</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Dashboard</li>
+          <li class="breadcrumb-item active">Enrolled students</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section dashboard">
+    <section class="section">
       <div class="row">
-<!-- Reports -->
-<div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <center><img src="/NCC_BOOTSTRAP/CADET/assets/img/10.jpeg" alt="" style="width:100%;height:70vh;"></center>
-                </div>
+        <div class="col-lg-12">
 
-              </div>
-            </div><!-- End Reports -->
-       
+          <div class="card" style="height:700px;">
+            <div class="card-body">
+          
+              <iframe  src="regment.php" id="regment" width="100%" height="100%" frameborder="0"></iframe>
 
+            </div>
+          </div>
+
+        </div>
       </div>
       <div id="password-form" class="modal" style="display:none;">
     <div class="modal-content">
@@ -215,7 +213,8 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   </main><!-- End #main -->
 
- 
+  <!-- ======= Footer ======= -->
+
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

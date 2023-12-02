@@ -101,7 +101,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
    <li class="nav-heading">Dashboard</li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="upload_schedule.php">
+        <a class="nav-link collapsed" href="schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
@@ -184,38 +184,28 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     </div><!-- End Page Title -->
 
     <section class="section dashboard">
-      <div class="row">
-<!-- Reports -->
-<div class="col-12">
-              <div class="card">
-                <div class="card-body">
-                  <center><img src="/NCC_BOOTSTRAP/CADET/assets/img/10.jpeg" alt="" style="width:100%;height:70vh;"></center>
-                </div>
+    <section class="section">
 
-              </div>
-            </div><!-- End Reports -->
-       
+<!-- PDF will be displayed here -->
+<iframe  src="upload.html" id="upload" width="100%" height="400" frameborder="0"></iframe>
 
-      </div>
-      <div id="password-form" class="modal" style="display:none;">
-    <div class="modal-content">
-        <span class="close" onclick="closePasswordForm()">&times;</span>
-        <form method="post" action="">
-            <label for="new_password">New Password:</label>
-            <input type="password" name="new_password" required><br>
-            <br>
-            <label for="confirm_new_password">Confirm New Password:</label>
-            <input  type="password" name="confirm_new_password" required><br>
-            <br>
-            <input  type="submit" class="update_password" name="update_password" value="Save Password">
-        </form>
-    </div>
-</div>
+
+
+
+</body>
+</html>
+
+</section>
+
+
+                
+                
+
     </section>
 
   </main><!-- End #main -->
 
- 
+  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -231,23 +221,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-  <script>
-  document.getElementById("update-password-button").addEventListener("click", function() {
-    showPasswordForm();
-});
 
-// Function to display the password form dialog
-function showPasswordForm() {
-    var modal = document.getElementById("password-form");
-    modal.style.display = "block";
-}
-
-// Function to close the password form dialog
-function closePasswordForm() {
-    var modal = document.getElementById("password-form");
-    modal.style.display = "none";
-}
-  </script>
 </body>
 
 </html>
