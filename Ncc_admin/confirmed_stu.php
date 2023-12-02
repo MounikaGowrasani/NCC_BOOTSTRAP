@@ -27,6 +27,50 @@ if ($result->num_rows > 0) {
 
         if ($recordsResult->num_rows > 0) {
             // Output table header
+            echo '<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Confirmed Students</title>
+  <style>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  table, th, td {
+    border: 1px solid #000;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #cce6ff;/* Light Blue */
+  }
+  tr:hover {
+ 
+    transform: scale(1.02);
+    box-shadow: 0 0 4px 4px rgba(26, 9, 99, 0.3); /* added shadow effect */
+    transition: box-shadow 0.4s ease-in-out;
+    /* added for visibility on hover */
+  }
+  tr:nth-child(even) {
+    background-color:#e1f6ff; /* Light Blue */
+  }
+  tr:nth-child(odd) {
+    background-color:  #f0f8ff; /* Light Light Blue */
+  }
+  a {
+    text-decoration: none;
+    color: blue;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  </style>
+</head>
+<body>';
             echo "<h2>Confirmed students for $campid</h2>";
             echo "<table border='1'><tr><th>campid</th><th>Regimental_number</th><th>Name</th><th>Registration_number</th><th>Certificate</th></tr>";
 
@@ -57,8 +101,9 @@ if ($result->num_rows > 0) {
             }
 
             echo "</table>";
+            echo '</body></html>';
         } else {
-            echo "No records found for campid: $campid";
+            echo "<h2>No records found for campid: $campid</h2>";
         }
     }
 } else {

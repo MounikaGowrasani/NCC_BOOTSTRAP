@@ -42,7 +42,15 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
   <style>
-
+.custom-file-upload {
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 6px 12px;
+    cursor: pointer;
+}
+input[type="file"] {
+    display: none;
+}
 /* Style the modal */
 .modal {
 display: none;
@@ -243,6 +251,9 @@ color: #f00;
     <a href="retrieve1.php" target="_self">View ANO1(10A) Schedule</a>
     <br>
     <form action="" method="post" enctype="multipart/form-data">
+    <label for="file-upload" class="custom-file-upload">
+    Custom Upload
+</label>
         <input type="file" name="schedule_file" accept=".pdf">
         <input type="hidden" name="schedule_type" value="update1">
         <button type="submit" name="update" id="update">Update Schedule</button>
