@@ -10,7 +10,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Tooltips - NiceAdmin Bootstrap Template</title>
+  <title>NCCAdmin Dashboard</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -230,41 +230,9 @@ color: #f00;
       </nav>
     </div><!-- End Page Title -->
 
+    
     <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
-
-          <div class="card">
-            <div class="card-body">
-              
-              <h2>Retrieve PDF</h2>
-
-              <div class="container">
-    <a href="retrieve1.php" target="_self">View ANO1(10A) Schedule</a>
-    <br>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="file" name="schedule_file" accept=".pdf">
-        <input type="hidden" name="schedule_type" value="update1">
-        <button type="submit" name="update" id="update">Update Schedule</button>
-    </form>
-</div>
-<br>
-<br>
-<div class="container">
-    <a href="retrieve2.php">View ANO2(25A) Schedule</a>
-    <br>
-    <form action="" method="post" enctype="multipart/form-data">
-        <input type="file" name="schedule_file" accept=".pdf">
-        <input type="hidden" name="schedule_type" value="update2">
-        <button type="submit" name="update" id="update">Update Schedule</button>
-    </form>
-</div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+    <iframe  src="retrieve.php" id="pdfViewer" width="100%" height="600" frameborder="0"></iframe>
       <div id="password-form" class="modal" style="display:none;">
     <div class="modal-content">
         <span class="close" onclick="closePasswordForm()">&times;</span>
@@ -283,10 +251,7 @@ color: #f00;
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-  
-  </footer><!-- End Footer -->
+ 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

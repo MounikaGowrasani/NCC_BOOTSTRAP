@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Components / Alerts - NiceAdmin Bootstrap Template</title>
+  <title>NCCAdmin Dashboard</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -229,33 +229,9 @@ color: #f00;
           <div class="card">
             <div class="card-body">
 
-              <h5 class="card-title">Default</h5>
+            <iframe  src="add_eventss.php" id="events" width="100%" height="450" frameborder="0"></iframe>
 
-              <form action="events.php" method="POST">
-        <label for="eventName">Event Name:</label>
-        
-        <input type="text" id="eventName" name="eventName" required><br><br>
-
-        <label for="eventType">Event Type:</label>
-        
-        <select id="eventType" name="eventType">
-            <option value="Institution">Institution</option>
-            <option value="State">State</option>
-            <option value="National">National</option>
-        </select>
-       <br><br>
-        <label for="startDate">From Date:</label>
-        
-        <input type="date" id="startDate" name="startDate" required>
-        <br><br>
-
-        <label for="endDate">To Date:</label>
-        
-        <input type="date" id="endDate" name="endDate" required>
-         <br><br>
-        <input type="submit" value="Submit">
-    </form>
-
+       
            
 
             </div>
@@ -285,19 +261,6 @@ color: #f00;
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
