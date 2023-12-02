@@ -176,7 +176,8 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Enrolled students</li>
+          <li class="breadcrumb-item ">Events</li>
+          <li class="breadcrumb-item active">Add events</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
