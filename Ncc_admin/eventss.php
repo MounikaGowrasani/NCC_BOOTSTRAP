@@ -144,7 +144,7 @@ include 'updatepassword.php';
 <li class="nav-heading">Dashboard</li>
 
 <li class="nav-item">
-    <a class="nav-link collapsed" href="uploadschedule.php">
+    <a class="nav-link collapsed" href="schedule.php">
       <i class="bi bi-person"></i>
       <span>Schedule</span>
     </a>
@@ -191,12 +191,12 @@ include 'updatepassword.php';
         </a>
       </li>
       <li>
-        <a href="schedule.php">
+        <a href="regstu.php">
           <i class="bi bi-circle"></i><span>Registered students for camps</span>
         </a>
       </li>
       <li>
-        <a href="enrolled_students.php">
+        <a href="finalized_students.php">
           <i class="bi bi-circle"></i><span>Finalized students for camps</span>
         </a>
       </li>

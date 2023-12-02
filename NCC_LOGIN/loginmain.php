@@ -96,7 +96,7 @@ body::before {
         <h1>Login Page</h1>
         <form action="admin.php" method="post">
             <div class="input-container">
-                <i class="input-icon">✉️</i>
+                <i class="input-icon">👤</i>
                 <input class="input-field" type="text" name="uname" id="uname" placeholder="  Enter username" required>
             </div>
             <div class="input-container">

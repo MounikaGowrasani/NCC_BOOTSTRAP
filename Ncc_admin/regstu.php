@@ -173,7 +173,7 @@ color: #f00;
           </li>
           
           <li>
-            <a href="view_events.php">
+            <a href="eventss.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
@@ -201,7 +201,7 @@ color: #f00;
             </a>
           </li>
           <li>
-            <a href="enrolled_students.php">
+            <a href="finalized_students.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>

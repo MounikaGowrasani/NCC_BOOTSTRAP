@@ -197,7 +197,7 @@ color: #f00;
             </a>
           </li>
           <li>
-            <a href="schedule.php">
+            <a href="regstu.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>

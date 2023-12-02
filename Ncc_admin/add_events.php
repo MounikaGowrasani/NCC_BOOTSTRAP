@@ -188,12 +188,12 @@ color: #f00;
             </a>
           </li>
           <li>
-            <a href="schedule.php">
+            <a href="regstu.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="enrolled_students.php">
+            <a href="finalized_students.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
