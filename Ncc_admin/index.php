@@ -264,12 +264,7 @@ color: #f00;
 
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
-  <div class="social-links mt-2">
-                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
-              </div>
+             
     <div class="copyright">
       &copy; Copyright <strong><span>VFSTR</span></strong>. All Rights Reserved
     </div>
