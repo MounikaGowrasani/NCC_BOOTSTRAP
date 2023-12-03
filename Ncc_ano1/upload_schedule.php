@@ -8,7 +8,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - ANO-2</title>
+  <title>Dashboard - ANO-1</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     <i class="bi bi-list toggle-sidebar-btn"></i> &nbsp;&nbsp;&nbsp;
       <a href="index.php" class="logo d-flex align-items-center">
       
-        <span class="d-none d-lg-block">ANO-2</span>
+        <span class="d-none d-lg-block">ANO-1</span>
       </a>
     
     </div><!-- End Logo -->
@@ -57,13 +57,13 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span>Venkata Vyshnavi</span>
+            <span>Siva Koteswara Rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Care Taker</h6>
-              <span>Mobile no: 9063627150</span>
+              <h6>Associate NCC Officer</h6>
+              <span>Mobile no: 9440372374</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -169,33 +169,37 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   </aside><!-- End Sidebar-->
 
+
+
   <main id="main" class="main">
 
     <div class="pagetitle">
-    <h1>Enrolled Students</h1>
+      <h1>Schedule</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Enrolled students</li>
+          <li class="breadcrumb-item active">Dashboard</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
+    <section class="section dashboard">
     <section class="section">
-      <div class="row">
-        <div class="col-lg-12">
 
-          <div class="card" style="height:700px;">
-            <div class="card-body">
-          
-              <iframe  src="regment.php" id="regment" width="100%" height="100%" frameborder="0"></iframe>
+<!-- PDF will be displayed here -->
+<iframe  src="upload.html" id="upload" width="100%" height="400" frameborder="0"></iframe>
 
-            </div>
-          </div>
 
-        </div>
-      </div>
-      <div id="password-form" class="modal" style="display:none;">
+
+
+</body>
+</html>
+
+</section>
+
+
+                
+<div id="password-form" class="modal" style="display:none;">
     <div class="modal-content">
         <span class="close" onclick="closePasswordForm()">&times;</span>
         <form method="post" action="">
@@ -208,13 +212,13 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             <input  type="submit" class="update_password" name="update_password" value="Save Password">
         </form>
     </div>
-</div>
+</div>        
+
     </section>
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-
+  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

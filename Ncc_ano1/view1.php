@@ -34,9 +34,11 @@
             font-weight: bold;
             color: #333;
             font-size: 20px;
+            padding: 5px;
         }
         .detail {
             color: #333;
+            padding:5px;
             font-size: 20px;
         }
 
@@ -57,35 +59,12 @@
         .apply-button:hover {
             background-color: #0056b3;
         }
-
-        .registration-input {
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            width: 50%;
-            margin-top: 10px;
-        }
-        label {
-            font-weight: bold;
-            margin-right: 5px;
-            font-size: 20px;
-        }
-
-        input[type="text"],
-        {
-            width: 60%;
-            margin-top: 5px;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <?php
-        if (isset($_GET['campName'])) {
+        if (isset($_GET['eventName'])) {
             // Replace these with your actual database credentials
             $servername = "localhost";
             $username = "root";
@@ -101,42 +80,27 @@
             }
 
             // Retrieve camp details based on the campName from the URL
-            $campName = $_GET['campName'];
-            $sql = "SELECT * FROM camps WHERE name = '$campName'";
+            $eventName = $_GET['eventName'];
+            
+            $sql = "SELECT * FROM events WHERE name = '$eventName'";
             $result = $conn->query($sql);
-
+            
             if ($result->num_rows > 0) {
                 $row = $result->fetch_assoc();
-                echo "<h2>Camp Details</h2>";
-                session_start();
-                $_SESSION['campid'] = $row['campid'];
-                $today = date('Y-m-d');
-                echo "<p><span class='details'>Camp Name:</span> <span class='detail'>" . $row['name'] . "</span></p>";
-                echo "<p><span class='details'>Location:</span> <span class='detail'>" . $row['location'] . "</span></p>";
+                echo "<h2>Event Details</h2>";
+                echo "<p><span class='details'>Event Name:</span> <span class='detail'>" . $row['name'] . "</span></p>";
+                echo "<p><span class='details'>Event Type:</span> <span class='detail'>" . $row['type'] . "</span></p>";
                 echo "<p><span class='details'>From Date:</span> <span class='detail'>" . $row['fdate'] . "</span></p>";
                 echo "<p><span class='details'>To Date:</span> <span class='detail'>" . $row['tdate'] . "</span></p>";
-                echo "<p><span class='details'>Daily Allowance (per student):</span> <span class='detail'>" . $row['dallow'] . "</span></p>";
-                echo "<p><span class='details'>Travel Allowance (per student):</span> <span class='detail'>" . $row['tallow'] . "</span></p>";
-                echo "<p><span class='details'>Petrol Oil Lubricant Allowance (POL) (per student):</span> <span class='detail'>" . $row['pol'] . "</span></p>";
-                echo "<p><span class='details'>Total Expenditure:</span> <span class='detail'>" . $row['exp'] . "</span></p>";
-                echo "<p><span class='details'>Number of Students:</span> <span class='detail'>" . $row['no_stu'] . "</span></p>";
                 // You can add more details as needed
-
-                // Show registration input for upcoming camps
-              
-                if ($row['fdate'] > $today || ( $row['fdate'] <= $today && $row['tdate'] >= '$today')) {
-                    echo '<form method="POST" action="x.php">';
-                    echo '<button type="submit" class="apply-button">Update</button>';
-                    echo '</form>';
-                }
             } else {
-                echo "Camp details not found.";
+                echo "Event details not found.";
             }
 
             // Close the database connection
             $conn->close();
         } else {
-            echo "Camp Name not provided.";
+            echo "Event Name not provided.";
         }
         ?>
     </div>

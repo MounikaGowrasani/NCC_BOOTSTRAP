@@ -1,13 +1,6 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php'?>
-<?php
-ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
-
-// Now, include the file without specifying an absolute path
-include 'updatepassword.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,45 +8,10 @@ include 'updatepassword.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard - ANO-1</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-<style>
-        /* Style the modal */
-        .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
 
-/* Style the modal content */
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    width: 500px;
-    margin: 15% auto;
-    border: 1px solid #333;
-    border-radius: 5px;
-    position: relative;
-}
-
-/* Style the close button */
-.close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #f00;
-}
-  </style>
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -72,15 +30,9 @@ include 'updatepassword.php';
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="/NCC_BOOTSTRAP/CADET/assets/css/style.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
@@ -89,11 +41,12 @@ include 'updatepassword.php';
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
+    <i class="bi bi-list toggle-sidebar-btn"></i> &nbsp;&nbsp;&nbsp;
       <a href="index.php" class="logo d-flex align-items-center">
       
-        <span class="d-none d-lg-block">NCCAdmin</span>
+        <span class="d-none d-lg-block">ANO-1</span>
       </a>
-      <i class="bi bi-list toggle-sidebar-btn"></i>
+    
     </div><!-- End Logo -->
 
 
@@ -104,38 +57,19 @@ include 'updatepassword.php';
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span><?php echo $username; ?></span>
+            <span>Siva Koteswara Rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6><?php echo $username; ?></h6>
-              <span>Web Designer</span>
+              <h6>Associate NCC Officer</h6>
+              <span>Mobile no: 9440372374</span>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
-                <i class="bi bi-person"></i>
-                <span>My Profile</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-
-            <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.php">
-                <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
-              </a>
-            </li>
-            <li>
-              <hr class="dropdown-divider">
-            </li>
-            <li>
+             <li>
               <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
                 <span >Change password</span>
@@ -165,14 +99,9 @@ include 'updatepassword.php';
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
+   <li class="nav-heading">Dashboard</li>
       <li class="nav-item">
-        <a class="nav-link " href="index.php">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="schedule.php">
+        <a class="nav-link collapsed" href="upload_schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
@@ -190,13 +119,13 @@ include 'updatepassword.php';
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_events.php">
+            <a href="add_eventss.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
           
           <li>
-            <a href="view_events.php">
+            <a href="eventss.php">
               <i class="bi bi-circle"></i><span>View Events</span>
             </a>
           </li>
@@ -209,7 +138,7 @@ include 'updatepassword.php';
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_camps.php">
+            <a href="add_campss.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
@@ -219,12 +148,12 @@ include 'updatepassword.php';
             </a>
           </li>
           <li>
-            <a href="regstu.php">
+            <a href="registered_students.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="enrolled_students.php">
+            <a href="confirmed_studentss.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
@@ -240,72 +169,30 @@ include 'updatepassword.php';
 
   </aside><!-- End Sidebar-->
 
-
   <main id="main" class="main">
 
-  <div class="pagetitle">
-      <h1>Events</h1>
+    <div class="pagetitle">
+    <h1>Registered Camp Cadets</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Schedule</li>
+          <li class="breadcrumb-item">Camps</li>
+          <li class="breadcrumb-item active">Registered cadets</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
 
-    <section class="section profile">
     <section class="section">
+      <div class="row">
+        <div class="col-lg-12">
 
-          <!-- PDF will be displayed here -->
-          <iframe  src="confirmed_students.php" id="registered_students" width="80%" height="600px" frameborder="0" style="background-color:#fff"></iframe>
-     
-
-
-
-</body>
-</html>
-
-    </section>
-
-        
-
-                <div class="tab-pane fade pt-3" id="profile-change-password">
-                  <!-- Change Password Form -->
-                  <form>
-
-                    <div class="row mb-3">
-                      <label for="currentPassword" class="col-md-4 col-lg-3 col-form-label">Current Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="password" type="password" class="form-control" id="currentPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="newPassword" class="col-md-4 col-lg-3 col-form-label">New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="newpassword" type="password" class="form-control" id="newPassword">
-                      </div>
-                    </div>
-
-                    <div class="row mb-3">
-                      <label for="renewPassword" class="col-md-4 col-lg-3 col-form-label">Re-enter New Password</label>
-                      <div class="col-md-8 col-lg-9">
-                        <input name="renewpassword" type="password" class="form-control" id="renewPassword">
-                      </div>
-                    </div>
-
-                    <div class="text-center">
-                      <button type="submit" class="btn btn-primary">Change Password</button>
-                    </div>
-                  </form><!-- End Change Password Form -->
-
-                </div>
-
-              </div><!-- End Bordered Tabs -->
+          
+            <div class="card-body">
+          
+              <iframe  src="reg_stu.php" id="regment" width="100%" height="450" frameborder="0"></iframe>
 
             </div>
-          </div>
-
+          
         </div>
       </div>
       <div id="password-form" class="modal" style="display:none;">
@@ -327,18 +214,7 @@ include 'updatepassword.php';
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer ">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
+
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -371,7 +247,6 @@ function closePasswordForm() {
     modal.style.display = "none";
 }
   </script>
-  
 </body>
 
 </html>

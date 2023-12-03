@@ -15,7 +15,7 @@ if ($conn->connect_error) {
 
 // Retrieve the PDF data from the database
 $years=date('Y');
-$sql = "SELECT file_name, file_content FROM pdf_files where unit='10A' and years=$years"; // Change 'id' to match the PDF record you want to retrieve
+$sql = "SELECT file_name, file_content FROM pdf_files where unit= '10A' AND years = $years"; // Change 'id' to match the PDF record you want to retrieve
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

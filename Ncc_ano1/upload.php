@@ -25,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $unit = "10A";
         $years = date("Y");
 
+
         // Read the file content
         $fileContent = file_get_contents($fileTmpName);
 
@@ -32,7 +33,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $escapedFileName = $conn->real_escape_string($fileName);
 
         // Check if a record with the same 'years' value already exists
-        $sql = "SELECT * FROM pdf_files WHERE years = ? and unit=?";
+        $sql = "SELECT * FROM pdf_files WHERE years = ? and unit= ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("is", $years,$unit);
 

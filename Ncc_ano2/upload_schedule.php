@@ -101,7 +101,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
    <li class="nav-heading">Dashboard</li>
       <li class="nav-item">
-        <a class="nav-link collapsed" href="schedule.php">
+        <a class="nav-link collapsed" href="upload_schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
@@ -119,7 +119,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_events.php">
+            <a href="add_eventss.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
@@ -138,7 +138,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_camps.php">
+            <a href="add_campss.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
@@ -148,12 +148,12 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </a>
           </li>
           <li>
-            <a href="schedule.php">
+            <a href="registered_students.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="enrolled_students.php">
+            <a href="confirmed_studentss.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
@@ -174,7 +174,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Dashboard</h1>
+      <h1>Schedule</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -199,7 +199,20 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
 
                 
-                
+<div id="password-form" class="modal" style="display:none;">
+    <div class="modal-content">
+        <span class="close" onclick="closePasswordForm()">&times;</span>
+        <form method="post" action="">
+            <label for="new_password">New Password:</label>
+            <input type="password" name="new_password" required><br>
+            <br>
+            <label for="confirm_new_password">Confirm New Password:</label>
+            <input  type="password" name="confirm_new_password" required><br>
+            <br>
+            <input  type="submit" class="update_password" name="update_password" value="Save Password">
+        </form>
+    </div>
+</div>        
 
     </section>
 
@@ -221,7 +234,23 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+  document.getElementById("update-password-button").addEventListener("click", function() {
+    showPasswordForm();
+});
 
+// Function to display the password form dialog
+function showPasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "block";
+}
+
+// Function to close the password form dialog
+function closePasswordForm() {
+    var modal = document.getElementById("password-form");
+    modal.style.display = "none";
+}
+  </script>
 </body>
 
 </html>

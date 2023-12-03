@@ -1,11 +1,6 @@
-
 <?php
-
-require  'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';
+require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,7 +8,7 @@ require  'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard - ANO-1</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -38,170 +33,43 @@ require  'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';
   <link href="/NCC_BOOTSTRAP/CADET/assets/css/style.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
-  <style>
-
-        /* Style the modal */
-        .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-}
-
-/* Style the modal content */
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    width: 500px;
-    margin: 15% auto;
-    border: 1px solid #333;
-    border-radius: 5px;
-    position: relative;
-}
-
-/* Style the close button */
-.close {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.close:hover {
-    color: #f00;
-}
-
-
-
-    </style>
 </head>
 
 <body>
-<?php
-// Start the session to access session variables
-session_start();
-// Check if the 'uname' session variable exists
-if (isset($_SESSION['uname'])) {
-   
-    $username = $_SESSION['uname'];
-    echo $username;
-    
-    $query = "SELECT stu_name,pno,Registration_number FROM enroll WHERE regimental_number = '$username'";
-    $result = $conn->query($query);
 
-    if ($result->num_rows > 0) {
-        // Output data of the student
-       
-        while ($row = $result->fetch_assoc()) {
-            $studentName = $row['stu_name'];
-            $mno=$row['pno'];
-            $regno=$row['Registration_number'];
-            echo $studentName;
-        }
-    } else {
-        echo "Student not found.";
-    }
-
-    // Close the result set
-    $result->close();
-    
-  
-}
- else
-    echo "log out";
-
-
-    if (isset($_POST['update_password'])) {
-        // Handle password update here
-        $newPassword = $_POST['new_password'];
-        $confirmNewPassword = $_POST['confirm_new_password'];
-        if ($newPassword === $confirmNewPassword) {
-           
-    
-            // Check for a successful connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $connection->connect_error);
-            }
-    
-            // Update the password in the database
-            $updateQuery = "UPDATE logins SET passwords = '$newPassword' WHERE username = '$username'";
-            if ($conn->query($updateQuery) === TRUE) {
-                echo "<script>alert('Password updated successfully.');</script>";
-            } else {
-                echo "Error updating password: " . $connection->error;
-            }
-    
-            // Close the database connection
-            $conn->close();
-        } else {
-         
-            echo "<script>alert('New password and confirmation do not match.');</script>";
-        }
-    }
-?>
   <!-- ======= Header ======= -->
   <header id="header" class="header fixed-top d-flex align-items-center">
 
     <div class="d-flex align-items-center justify-content-between">
-    <i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <i class="bi bi-list toggle-sidebar-btn"></i> &nbsp;&nbsp;&nbsp;
       <a href="index.php" class="logo d-flex align-items-center">
-        <img src="assets/img/ncclogo-removebg-preview.png" alt="">
+      
         <span class="d-none d-lg-block">ANO-1</span>
       </a>
-  
+    
     </div><!-- End Logo -->
 
-    
 
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
 
-
-        <li class="nav-item dropdown">
-
-          <a class="nav-link nav-icon" href="#" >
-          <span class="d-none d-lg-block">Home</span>
-           
-          </a><!-- End Notification Icon -->
-
-         
-
-        </li><!-- End Notification Nav -->
-
-        
-
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="/NCC_BOOTSTRAP/CADET/assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
             <span>Siva Koteswara Rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Siva Koteswara Rao</h6>
-              <br>
-              <span>Mobile no: 8764485416</span>
+              <h6>Associate NCC Officer</h6>
+              <span>Mobile no: 9440372374</span>
             </li>
-            
-
-           
             <li>
               <hr class="dropdown-divider">
             </li>
 
-            <li>
+             <li>
               <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
                 <span >Change password</span>
@@ -226,25 +94,14 @@ if (isset($_SESSION['uname'])) {
 
   </header><!-- End Header -->
 
-
-
   <!-- ======= Sidebar ======= -->
   <aside id="sidebar" class="sidebar">
 
     <ul class="sidebar-nav" id="sidebar-nav">
-    <div class="d-flex align-items-center justify-content-between">
-      <a href="index.php" class="logo d-flex align-items-center">
 
-        
-        
-      </a>
-     
-    </div>
-  
-    <li class="nav-heading">Dashboard</li>
-
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="uploadschedule.php">
+   <li class="nav-heading">Dashboard</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="upload_schedule.php">
           <i class="bi bi-person"></i>
           <span>Schedule</span>
         </a>
@@ -262,7 +119,7 @@ if (isset($_SESSION['uname'])) {
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_events.php">
+            <a href="add_eventss.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
@@ -281,7 +138,7 @@ if (isset($_SESSION['uname'])) {
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_camps.php">
+            <a href="add_campss.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
@@ -291,12 +148,12 @@ if (isset($_SESSION['uname'])) {
             </a>
           </li>
           <li>
-            <a href="regstu.php">
+            <a href="registered_students.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="enrolled_students.php">
+            <a href="confirmed_studentss.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
@@ -312,6 +169,8 @@ if (isset($_SESSION['uname'])) {
 
   </aside><!-- End Sidebar-->
 
+
+
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -323,6 +182,9 @@ if (isset($_SESSION['uname'])) {
         </ol>
       </nav>
     </div><!-- End Page Title -->
+
+    <section class="section dashboard">
+      <div class="row">
 <!-- Reports -->
 <div class="col-12">
               <div class="card">
@@ -332,29 +194,7 @@ if (isset($_SESSION['uname'])) {
 
               </div>
             </div><!-- End Reports -->
-    <section class="section dashboard">
-      <div class="row">
-
-        <!-- Left side columns -->
-        <div class="col-lg-8">
-          <div class="row">
-
-           
-
-           
-
-            
-
-            
-
-            
-
-           
-          </div>
-        </div><!-- End Left side columns -->
-
        
-
 
       </div>
       <div id="password-form" class="modal" style="display:none;">
@@ -371,12 +211,11 @@ if (isset($_SESSION['uname'])) {
         </form>
     </div>
 </div>
-
     </section>
 
   </main><!-- End #main -->
 
-
+ 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
@@ -392,7 +231,7 @@ if (isset($_SESSION['uname'])) {
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
-<script>
+  <script>
   document.getElementById("update-password-button").addEventListener("click", function() {
     showPasswordForm();
 });
