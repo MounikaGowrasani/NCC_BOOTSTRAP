@@ -1,6 +1,8 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 

@@ -1,6 +1,12 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
+<?php
+ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
+
+// Now, include the file without specifying an absolute path
+include 'updatepassword.php';
+?>
 
 
 <!DOCTYPE html>

@@ -45,6 +45,43 @@ include 'updatepassword.php';
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+  <style>
+
+/* Style the modal */
+.modal {
+display: none;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Style the modal content */
+.modal-content {
+background-color: #fff;
+padding: 20px;
+width: 500px;
+margin: 15% auto;
+border: 1px solid #333;
+border-radius: 5px;
+position: relative;
+}
+
+/* Style the close button */
+.close {
+position: absolute;
+top: 0;
+right: 0;
+padding: 5px 10px;
+cursor: pointer;
+}
+
+.close:hover {
+color: #f00;
+}
+</style>
 </head>
 
 <body>
@@ -229,7 +266,7 @@ include 'updatepassword.php';
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="100%" frameborder="0" ></iframe>
+          <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="600px" frameborder="0" ></iframe>
      
 
 

@@ -257,7 +257,7 @@ include 'updatepassword.php';
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="confirmed_students.php" id="registered_students" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
+          <iframe  src="confirmed_students.php" id="registered_students" width="80%" height="600px" frameborder="0" style="background-color:#fff"></iframe>
      
 
 

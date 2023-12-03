@@ -1,3 +1,14 @@
+<?php
+require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
+?>
+<?php
+ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
+
+// Now, include the file without specifying an absolute path
+include 'updatepassword.php';
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -72,7 +83,66 @@ cursor: pointer;
 .close:hover {
 color: #f00;
 }
-</style>
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+   
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="button"],
+input[type="submit"] {
+    background-color: #012970;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover {
+    background-color: #01579b;
+}
+
+/* Optional: Style for disabled input */
+input[disabled] {
+    background-color: #eee;
+    cursor: not-allowed;
+}
+
+
+    </style>
 </head>
 
 <body>
@@ -212,7 +282,7 @@ color: #f00;
   <main id="main" class="main">
 
     <div class="pagetitle">
-    <h2>Camps</h2>
+   
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
@@ -226,12 +296,12 @@ color: #f00;
       <div class="row">
         <div class="col-lg-6">
 
-          <div class="card">
-            <div class="card-body">
-              <h5 class="card-title">General Form Elements</h5>
+          <div class="card" >
+            <div class="card-body" >
+              
               <form action="camps.php" method="post">
         <label for="campName">Camp Name:</label>
-        <br>
+      
         <select id="campName" name="campName" required>
     <option value="ATC">ATC</option>
     <option value="CATC">CATC</option>
@@ -245,39 +315,39 @@ color: #f00;
     <option value="ALC">ALC</option>
     <option value="RDC">RDC</option>
 </select>
-<br><br>
+<br>
 
         <label for="location">Location:</label>
-        <br>
-        <input type="text" id="location" name="location" required><br><br>
+       
+        <input type="text" id="location" name="location" required><br>
 
         <label for="startDate">From Date:</label>
-        <br>
-        <input type="date" id="startDate" name="startDate" required><br><br>
+        
+        <input type="date" id="startDate" name="startDate" required><br>
 
         <label for="endDate">To Date:</label>
-        <br>
-        <input type="date" id="endDate" name="endDate" required><br><br>
+        
+        <input type="date" id="endDate" name="endDate" required><br>
 
         <label for="dailyAllowance">Daily Allowance (per student):</label>
-        <br>
-        <input type="number" id="dailyAllowance" name="dailyAllowance" required><br><br>
+      
+        <input type="number" id="dailyAllowance" name="dailyAllowance" required><br>
 
         <label for="travelAllowance">Travel Allowance (per student):</label>
-        <br>
-        <input type="number" id="travelAllowance" name="travelAllowance" required><br><br>
+       
+        <input type="number" id="travelAllowance" name="travelAllowance" required><br>
 
         <label for="polAllowance">Petrol Oil Lubricant Allowance (POL) (per student):</label>
-        <br>
-        <input type="number" id="polAllowance" name="polAllowance" required><br><br>
+        
+        <input type="number" id="polAllowance" name="polAllowance" required><br>
 
         <label for="numberOfStudents">Number of Students:</label>
-        <br>
-        <input type="number" id="numberOfStudents" name="numberOfStudents" required><br><br>
+      
+        <input type="number" id="numberOfStudents" name="numberOfStudents" required><br>
 
         <label for="totalExpenditure">Total Expenditure:</label>
-        <br>
-        <input type="number" id="totalExpenditure" name="totalExpenditure" disabled><br><br>
+      
+        <input type="number" id="totalExpenditure" name="totalExpenditure" disabled><br>
 
         <input type="button" value="Total Expenditure" onclick="calculateTotalExpenditure()">
         <input type="submit" value="submit">

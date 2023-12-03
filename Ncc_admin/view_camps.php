@@ -5,7 +5,7 @@
     <style>
          body {
             font-family: Arial, sans-serif;
-            background-color:#f6f9ff; 
+            
             margin: 0;
             padding: 0;
         }
@@ -13,7 +13,7 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background-color:#fff;
+          
             color:#fff;
             padding: 20px;
         }

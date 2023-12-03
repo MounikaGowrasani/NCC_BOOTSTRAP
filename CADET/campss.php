@@ -1,7 +1,7 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include c'session.php'?>
+
 <?php include 'updatepassword.php';?>
 <!DOCTYPE html>
 <html lang="en">
@@ -242,7 +242,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="view_camps.php" id="pdfViewer" width="80%" height="100%" frameborder="0" ></iframe>
+          <iframe  src="view_camps.php" id="pdfViewer" width="80%" height="600px" frameborder="0" ></iframe>
      
 
 
