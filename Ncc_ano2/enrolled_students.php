@@ -119,7 +119,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_events.php">
+            <a href="add_eventss.php">
               <i class="bi bi-circle"></i><span>Add Events</span>
             </a>
           </li>
@@ -138,7 +138,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_camps.php">
+            <a href="add_campss.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>
@@ -148,12 +148,12 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </a>
           </li>
           <li>
-            <a href="schedule.php">
+            <a href="registered_students.php">
               <i class="bi bi-circle"></i><span>Registered students for camps</span>
             </a>
           </li>
           <li>
-            <a href="enrolled_students.php">
+            <a href="confirmed_studentss.php">
               <i class="bi bi-circle"></i><span>Finalized students for camps</span>
             </a>
           </li>
