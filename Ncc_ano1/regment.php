@@ -113,7 +113,7 @@ echo "<body>";
     $id=1;
     $alternateColor = false;
     while ($row = $result->fetch_assoc()) {
-        $rowColor = $alternateColor ? '#FFB476' : '#FFF7E8'; 
+        $rowColor = $alternateColor ? '#FFF' : '#FFF'; 
      
         echo "<tr style='background-color: " . $rowColor . ";'><td>" . $id . "</td><td>" . $row["stu_name"] . "</td><td>" . $row["pno"] ."</td><td>" . $row["Email"] . "</td><td>" . $row["Gender"] ."</td><td>" . $row["Registration_number"] . "</td><td>";
 

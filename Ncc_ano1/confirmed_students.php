@@ -14,22 +14,41 @@ if ($conn->connect_error) {
 echo "<html>";
 echo "<head>";
 echo "<style>
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-    }
-    th, td {
-        padding: 8px;
-        text-align: left;
-        border: 2px solid #ddd;
-    }
-    th {
-        background-color: #f2f2f2;
-    }
-    h2 {
-        color: FF9546;;
-    }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+table, th, td {
+  border: 1px solid #000;
+}
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+th {
+  background-color: #cce6ff;/* Light Blue */
+}
+tr:hover {
+
+  transform: scale(1.02);
+  box-shadow: 0 0 4px 4px rgba(26, 9, 99, 0.3); /* added shadow effect */
+  transition: box-shadow 0.4s ease-in-out;
+  /* added for visibility on hover */
+}
+tr:nth-child(even) {
+  background-color:#e1f6ff; /* Light Blue */
+}
+tr:nth-child(odd) {
+  background-color:  #f0f8ff; /* Light Light Blue */
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+a:hover {
+  text-decoration: underline;
+}
 </style>";
 echo "</head>";
 echo "<body>";
@@ -41,7 +60,7 @@ if ($result->num_rows > 0) {
     // Output data of each row
     while($row = $result->fetch_assoc()) {
         $campid = $row["campid"];
-        $recordsSql="SELECT * FROM register INNER JOIN enroll ON register.regno = enroll.Registration_number WHERE status='yes' AND campid='$campid' AND enroll.ncc_unit_enrolled = '10'";
+        $recordsSql="SELECT * FROM register INNER JOIN enroll ON register.regno = enroll.Registration_number WHERE status='yes' AND campid='$campid' AND enroll.ncc_unit_enrolled = '10A'";
 
         // Select records for the current campid and specific regimental number
         $recordsResult = $conn->query($recordsSql);
@@ -79,6 +98,7 @@ if ($result->num_rows > 0) {
 
             echo "</table>";
         } else { echo "No records found for campid: $campid";
+            echo "<br>";
         }
     }
 } else {
