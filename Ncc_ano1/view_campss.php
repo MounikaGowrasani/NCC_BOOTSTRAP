@@ -57,13 +57,13 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span>Venkata Vyshnavi</span>
+            <span>Siva Koteswara Rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Care Taker</h6>
-              <span>Mobile no: 9063627150</span>
+              <h6>Associate NCC Officer</h6>
+              <span>Mobile no: 9440372374</span>
             </li>
             <li>
               <hr class="dropdown-divider">
