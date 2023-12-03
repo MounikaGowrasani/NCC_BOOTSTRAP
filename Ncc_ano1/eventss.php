@@ -1,13 +1,6 @@
 <?php
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
-<?php include 'session.php'?>
-<?php
-ini_set('include_path', '../../NCC_BOOTSTRAP/NCC_LOGIN');
-
-// Now, include the file without specifying an absolute path
-include 'updatepassword.php';
-?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,7 +8,7 @@ include 'updatepassword.php';
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Users / Profile - NiceAdmin Bootstrap Template</title>
+  <title>Dashboard - ANO-2</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -37,72 +30,46 @@ include 'updatepassword.php';
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
+  <link href="/NCC_BOOTSTRAP/CADET/assets/css/style.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
 
-  <!-- =======================================================
-  * Template Name: NiceAdmin
-  * Updated: Nov 17 2023 with Bootstrap v5.3.2
-  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
 </head>
 
 <body>
 
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
 
- <!-- ======= Header ======= -->
- <header id="header" class="header fixed-top d-flex align-items-center">
-
-<div class="d-flex align-items-center justify-content-between">
-<i class="bi bi-list toggle-sidebar-btn"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="index.php" class="logo d-flex align-items-center">
-    <img src="assets/img/ncclogo-removebg-preview.png" alt="">
-    <span class="d-none d-lg-block">ANO-1</span>
-  </a>
-  
-</div><!-- End Logo -->
-
-
-
-<nav class="header-nav ms-auto">
-  <ul class="d-flex align-items-center">
-
-
-    <li class="nav-item dropdown">
-
-      <a class="nav-link nav-icon" href="#" >
-      <span class="d-none d-lg-block">Home</span>
-       
-      </a><!-- End Notification Icon -->
-
-     
-
-    </li><!-- End Notification Nav -->
-
+    <div class="d-flex align-items-center justify-content-between">
+    <i class="bi bi-list toggle-sidebar-btn"></i> &nbsp;&nbsp;&nbsp;
+      <a href="index.php" class="logo d-flex align-items-center">
+      
+        <span class="d-none d-lg-block">ANO-2</span>
+      </a>
     
+    </div><!-- End Logo -->
 
-    <li class="nav-item dropdown pe-3">
 
-    <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="/NCC_BOOTSTRAP/CADET/assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
-            <span>Siva Koteswara Rao</span>
+    <nav class="header-nav ms-auto">
+      <ul class="d-flex align-items-center">
+
+        <li class="nav-item dropdown pe-3">
+
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
+            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <span>Venkata Vyshnavi</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Siva Koteswara Rao</h6>
-              <br>
-              <span>Mobile no: 8764485416</span>
+              <h6>Care Taker</h6>
+              <span>Mobile no: 9063627150</span>
             </li>
-  
+            <li>
+              <hr class="dropdown-divider">
+            </li>
 
- 
-  <li>
-    <hr class="dropdown-divider">
-  </li>
-
-  <li>
+             <li>
               <a class="dropdown-item d-flex align-items-center" href="#" onclick="showPasswordForm()">
                 <i class="bi bi-question-circle"></i>
                 <span >Change password</span>
@@ -113,113 +80,104 @@ include 'updatepassword.php';
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="logout.php">
+              <a class="dropdown-item d-flex align-items-center" href="/NCC_BOOTSTRAP/NCC_LOGIN/logout.php">
                 <i class="bi bi-box-arrow-right"></i>
                 <span >Log Out</span>
               </a>
             </li>
 
-</ul><!-- End Profile Dropdown Items -->
-</li><!-- End Profile Nav -->
+          </ul><!-- End Profile Dropdown Items -->
+        </li><!-- End Profile Nav -->
 
-</ul>
-</nav><!-- End Icons Navigation -->
+      </ul>
+    </nav><!-- End Icons Navigation -->
 
-</header><!-- End Header -->
+  </header><!-- End Header -->
 
+  <!-- ======= Sidebar ======= -->
+  <aside id="sidebar" class="sidebar">
 
- <!-- ======= Sidebar ======= -->
- <aside id="sidebar" class="sidebar">
+    <ul class="sidebar-nav" id="sidebar-nav">
 
-<ul class="sidebar-nav" id="sidebar-nav">
-<div class="d-flex align-items-center justify-content-between">
-  <a href="index.php" class="logo d-flex align-items-center">
-
-    
-    
-  </a>
- 
-</div>
-
-<li class="nav-heading">Dashboard</li>
-
-<li class="nav-item">
-    <a class="nav-link collapsed" href="uploadschedule.php">
-      <i class="bi bi-person"></i>
-      <span>Schedule</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="enrolled_students.php">
-      <i class="bi bi-person"></i>
-      <span>Enrolled Students</span>
-    </a>
-  </li>
-
-  <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
-    </a>
-    <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      <li>
-        <a href="add_events.php">
-          <i class="bi bi-circle"></i><span>Add Events</span>
+   <li class="nav-heading">Dashboard</li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="upload_schedule.php">
+          <i class="bi bi-person"></i>
+          <span>Schedule</span>
         </a>
       </li>
-      
-      <li>
-        <a href="eventss.php">
-          <i class="bi bi-circle"></i><span>View Events</span>
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="enrolled_students.php">
+          <i class="bi bi-person"></i>
+          <span>Enrolled Students</span>
         </a>
       </li>
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-menu-button-wide"></i><span>Events</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add_eventss.php">
+              <i class="bi bi-circle"></i><span>Add Events</span>
+            </a>
+          </li>
+          
+          <li>
+            <a href="eventss.php">
+              <i class="bi bi-circle"></i><span>View Events</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="add_campss.php">
+              <i class="bi bi-circle"></i><span>Add Camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="view_campss.php">
+              <i class="bi bi-circle"></i><span>View Camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="registered_students.php">
+              <i class="bi bi-circle"></i><span>Registered students for camps</span>
+            </a>
+          </li>
+          <li>
+            <a href="confirmed_studentss.php">
+              <i class="bi bi-circle"></i><span>Finalized students for camps</span>
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Forms Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="feed_back.php">
+          <i class="bi bi-question-circle"></i>
+          <span>View Feedback</span>
+        </a>
+      </li><!-- End View Feedback Page Nav -->
     </ul>
-  </li><!-- End Components Nav -->
 
-  <li class="nav-item">
-    <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-      <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
-    </a>
-    <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-      <li>
-        <a href="add_camps.php">
-          <i class="bi bi-circle"></i><span>Add Camps</span>
-        </a>
-      </li>
-      <li>
-        <a href="view_campss.php">
-          <i class="bi bi-circle"></i><span>View Camps</span>
-        </a>
-      </li>
-      <li>
-        <a href="schedule.php">
-          <i class="bi bi-circle"></i><span>Registered students for camps</span>
-        </a>
-      </li>
-      <li>
-        <a href="enrolled_students.php">
-          <i class="bi bi-circle"></i><span>Finalized students for camps</span>
-        </a>
-      </li>
-    </ul>
-  </li><!-- End Forms Nav -->
-  <li class="nav-item">
-    <a class="nav-link collapsed" href="feed_back.php">
-      <i class="bi bi-question-circle"></i>
-      <span>View Feedback</span>
-    </a>
-  </li><!-- End View Feedback Page Nav -->
-</ul>
-
-</aside><!-- End Sidebar-->
+  </aside><!-- End Sidebar-->
 
   <main id="main" class="main">
 
   <div class="pagetitle">
-      <h1>Events</h1>
+      <h1> View Events</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.php">Home</a></li>
-          <li class="breadcrumb-item active">Schedule</li>
+          <li class="breadcrumb-item">Events</a></li>
+          <li class="breadcrumb-item active">View Events</li>
         </ol>
       </nav>
     </div><!-- End Page Title -->
@@ -228,7 +186,7 @@ include 'updatepassword.php';
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
+          <iframe  src="view_events.php" id="events" width="80%" height="350" frameborder="0" ></iframe>
      
 
 
@@ -297,19 +255,7 @@ include 'updatepassword.php';
 
   </main><!-- End #main -->
 
-  <!-- ======= Footer ======= -->
-  <footer id="footer" class="footer ">
-    <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
-    </div>
-    <div class="credits">
-      <!-- All the links in the footer should remain intact. -->
-      <!-- You can delete the links only if you purchased the pro version. -->
-      <!-- Licensing information: https://bootstrapmade.com/license/ -->
-      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-    </div>
-  </footer><!-- End Footer -->
+
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 

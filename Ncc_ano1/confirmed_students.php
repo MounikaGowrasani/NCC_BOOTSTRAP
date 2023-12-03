@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     // Output data of each row
     while($row = $result->fetch_assoc()) {
         $campid = $row["campid"];
-        $recordsSql="SELECT * FROM register INNER JOIN enroll ON register.regno = enroll.Registration_number WHERE status='yes' AND campid='$campid' AND enroll.ncc_unit_enrolled = '10A'";
+        $recordsSql="SELECT * FROM register INNER JOIN enroll ON register.regno = enroll.Registration_number WHERE status='yes' AND campid='$campid' AND enroll.ncc_unit_enrolled = '25A'";
 
         // Select records for the current campid and specific regimental number
         $recordsResult = $conn->query($recordsSql);
@@ -78,13 +78,8 @@ if ($result->num_rows > 0) {
             }
 
             echo "</table>";
+        } else { echo "No records found for campid: $campid";
         }
-         else
-         { 
-            echo  "No records found for campid: $campid\n";
-            echo "<br>";
-        }
-        
     }
 } else {
     echo "No distinct campid values found in the database for the specified regimental number.";
