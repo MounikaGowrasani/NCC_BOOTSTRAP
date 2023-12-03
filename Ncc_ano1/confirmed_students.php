@@ -41,7 +41,7 @@ if ($result->num_rows > 0) {
     // Output data of each row
     while($row = $result->fetch_assoc()) {
         $campid = $row["campid"];
-        $recordsSql="SELECT * FROM register INNER JOIN enroll ON register.regno = enroll.Registration_number WHERE status='yes' AND campid='$campid' AND enroll.ncc_unit_enrolled = '25A'";
+        $recordsSql="SELECT * FROM register INNER JOIN enroll ON register.regno = enroll.Registration_number WHERE status='yes' AND campid='$campid' AND enroll.ncc_unit_enrolled = '10'";
 
         // Select records for the current campid and specific regimental number
         $recordsResult = $conn->query($recordsSql);

@@ -14,7 +14,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "SELECT * FROM enroll wherencc_unit_enrolled='65-G,10(A)GBN NCC,Guntur' OR ncc_unit_enrolled='10A'";
+$sql = "SELECT * FROM enroll where ncc_unit_enrolled='65-G,10(A)GBN NCC,Guntur' OR ncc_unit_enrolled='10A'";
 
 $result = $conn->query($sql);
 
@@ -78,7 +78,7 @@ th {
    
 </style>";
 echo "</head>";
-echo "<h2>25(A) enrolled students</h2>";
+echo "<h2>10(A) enrolled students</h2>";
 echo "<body>";
     echo "<table border=><tr><th>ID</th>
     <th>stu_name</th>

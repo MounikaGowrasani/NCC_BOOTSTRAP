@@ -8,7 +8,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Dashboard - ANO-2</title>
+  <title>Dashboard - ANO-1</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -44,7 +44,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     <i class="bi bi-list toggle-sidebar-btn"></i> &nbsp;&nbsp;&nbsp;
       <a href="index.php" class="logo d-flex align-items-center">
       
-        <span class="d-none d-lg-block">ANO-2</span>
+        <span class="d-none d-lg-block">ANO-1</span>
       </a>
     
     </div><!-- End Logo -->
