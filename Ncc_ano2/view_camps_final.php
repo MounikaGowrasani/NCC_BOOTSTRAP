@@ -21,7 +21,8 @@
         }
 
         .container {
-            max-width: 800px;
+            padding:20px;
+            max-width: fit-content;
             margin-top: 39px;
             padding: 20px;
             background-color:#fff;
