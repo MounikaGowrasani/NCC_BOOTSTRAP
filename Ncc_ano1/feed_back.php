@@ -209,7 +209,7 @@ include 'updatepassword.php';
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="add_camps.php">
+            <a href="add_campss.php">
               <i class="bi bi-circle"></i><span>Add Camps</span>
             </a>
           </li>

@@ -186,7 +186,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       <div class="row">
         <div class="col-lg-12">
 
-          <div class="card" style="height:700px;">
+          <div class="card" style="height:700px;background-color:#f6f9ff;box-shadow:none;">
             <div class="card-body">
           
               <iframe  src="events.html" id="regment" width="100%" height="100%" frameborder="0"></iframe>

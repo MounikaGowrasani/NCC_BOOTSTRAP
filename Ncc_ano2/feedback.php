@@ -7,30 +7,33 @@
         table {
             border-collapse: collapse;
             width: 80%;
+           
             margin: 20px auto;
         }
 
         /* Style table headers */
         th {
-            background-color: #f2f2f2;
+            background-color: #f6f9ff;
             text-align: left;
         }
 
         /* Style table rows */
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f6f9ff;
+          
         }
 
         /* Style table cells */
         td, th {
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #000;
+            border-width:1px;
         }
     </style>
 
 </head>
 <body>
-    <h2>Feedback Data</h2>
+    <center><h2>Feedback Data</h2></center>
 <?php
 // Database connection parameters
 $servername = "localhost";
