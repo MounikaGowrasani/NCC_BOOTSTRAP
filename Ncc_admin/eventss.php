@@ -121,8 +121,8 @@ color: #f00;
     <li class="nav-item dropdown pe-3">
 
     <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="/NCC_BOOTSTRAP/CADET/assets/img/profile-img.jpeg" alt="Profile" class="rounded-circle">
-            <span>Siva Koteswara Rao</span>
+    <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+    <span>Siva Koteswara rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -263,7 +263,7 @@ color: #f00;
     </div><!-- End Page Title -->
 
     <section class="section profile">
-    <section class="section">
+    <section class="section" >
 
           <!-- PDF will be displayed here -->
           <iframe  src="/NCC_BOOTSTRAP/CADET/events.php" id="events" width="80%" height="600px" frameborder="0" ></iframe>

@@ -13,7 +13,7 @@
 
         body {
             font-family: Arial, sans-serif;
-            background-color: #fff;
+           
         }
 
 
@@ -29,7 +29,7 @@
             margin-bottom: 20px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            background-color: #fff;
+    
             color: #333;
         }
 
@@ -37,7 +37,7 @@
             margin: 20px auto;
             padding: 20px;
             max-width: 600px;
-            background-color: #fff;
+          
             border: 1px solid #ccc;
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

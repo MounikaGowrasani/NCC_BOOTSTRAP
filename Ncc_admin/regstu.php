@@ -235,7 +235,7 @@ color: #f00;
     <section class="section">
 
           <!-- PDF will be displayed here -->
-          <iframe  src="registered_students.php" id="registered_students" width="80%" height="100%" frameborder="0" style="background-color:#fff"></iframe>
+          <iframe  src="registered_students.php" id="registered_students" width="80%" height="600px" frameborder="0" style="background-color:#fff"></iframe>
      
 
 

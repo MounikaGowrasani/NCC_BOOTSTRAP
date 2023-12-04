@@ -3,48 +3,59 @@
 <head>
     <title>Add Events</title>
     <style>
-        body {
+body {
     font-family: Arial, sans-serif;
-   
-    
+
 }
 
-h2 {
-    color: #333;
-    margin: 10px;
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+  
 }
 
 label {
+    display: block;
+    margin-bottom: 8px;
     font-weight: bold;
 }
 
 input[type="text"],
 input[type="date"],
 select {
-    width: 50%;
+    width: 100%;
     padding: 10px;
-    margin-bottom: 10px;
-    margin-top: 5px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 4px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
 }
 
 input[type="submit"] {
-    background-color: #007bff;
+    background-color: #01579b;
     color: #fff;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
     cursor: pointer;
 }
-form {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
-           
-            border-radius: 5px;
-           
-        }
+
+input[type="submit"]:hover {
+    background-color:#012970;
+
+}
+
     </style>
 </head>
 <body>

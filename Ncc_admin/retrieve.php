@@ -27,7 +27,7 @@
 
         a {
             text-decoration: none;
-            background-color: #007bff;
+            background-color: #01579b;
             color: #fff;
             padding: 10px 20px;
             border-radius: 5px;
@@ -37,6 +37,7 @@
 
         button {
             margin-top: 10px;
+           
         }
 
         #update {

@@ -104,7 +104,7 @@ if (isset($_GET['camp'])) {
 $conn->close();
 
 ?>
-    <button type="submit">Update Selected Students</button>
+    <button type="submit" style=" background-color:#01579b; color: #fff; border-radius: 4px;">Update Selected Students</button>
 </form>
 
 </body>

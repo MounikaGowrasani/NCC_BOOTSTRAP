@@ -65,7 +65,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
                 <option value="active">Active Camps</option>
                 <option value="completed">Completed Camps</option>
             </select>
-            <input type="submit" value="Show Camps">
+            <input type="submit" value="Show Camps" style=" background-color: #01579b;color: #fff; border-radius: 4px;">
         </form>
 
             

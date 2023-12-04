@@ -65,7 +65,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       <li class="nav-item dropdown">
 
         <a class="nav-link nav-icon" href="#" >
-        <span class="d-none d-lg-block">Home</span>
+        <span class="d-none d-lg-block" style="border-bottom: 2px solid #00AEEF;  border-top: 2px solid #EF1C25;"><h5 style="margin: 0;">Home</h5></span>
          
         </a><!-- End Notification Icon -->
 
@@ -208,7 +208,8 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     <li class="nav-item">
       <a class="nav-link collapsed" href="faq.php">
         <i class="bi bi-question-circle"></i>
-        <span>View Feedback</span>
+        <span>F A Q's</span>
+
       </a>
     </li><!-- End View Feedback Page Nav -->
 

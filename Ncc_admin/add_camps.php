@@ -122,7 +122,7 @@ select {
 
 input[type="button"],
 input[type="submit"] {
-    background-color: #012970;
+    background-color:#01579b; 
     color: #fff;
     padding: 10px 15px;
     border: none;
@@ -132,7 +132,7 @@ input[type="submit"] {
 
 input[type="button"]:hover,
 input[type="submit"]:hover {
-    background-color: #01579b;
+    background-color: #012970;
 }
 
 /* Optional: Style for disabled input */
@@ -160,13 +160,14 @@ input[disabled] {
 
 
     <nav class="header-nav ms-auto">
+      
       <ul class="d-flex align-items-center">
 
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Siva Koteswara rao</span>
+            <span>Siva Koteswara rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -293,7 +294,7 @@ input[disabled] {
     </div><!-- End Page Title -->
 
     <section class="section">
-      <div class="row">
+      <div class="row" style="justify-content: center;">
         <div class="col-lg-6">
 
           <div class="card" >

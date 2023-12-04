@@ -15,14 +15,16 @@
 
         /* Style table headers */
         th {
-            background-color: #f2f2f2;
-            text-align: left;
-        }
+    background-color: #cce6ff;/* Light Blue */
+  }
 
         /* Style table rows */
         tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
+    background-color:#e1f6ff; /* Light Blue */
+  }
+  tr:nth-child(odd) {
+    background-color:  #f0f8ff; /* Light Light Blue */
+  }
 
         /* Style table cells */
         td, th {
@@ -65,6 +67,7 @@ $query="SELECT * FROM feedback ";
             echo '<td>' . $row['feedback'] . '</td>';
             echo '<td>' . $row['rating'] . '</td>';
             echo '<td>' . $row['feedbackdate'] . '</td>';
+            
             echo '</tr>';
         }
         

@@ -33,7 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bind_param("is", $registerid, $certificateBlob);
 
         if ($stmt->execute()) {
-            echo "Certificate uploaded and inserted successfully.";
+           
+            echo '<script>alert("Certificate uploaded and inserted successfully.");</script>';
         } else {
             echo "Error inserting certificate: " . $stmt->error;
         }

@@ -62,7 +62,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
                 <option value="active">Active Events</option>
                 <option value="completed">Completed Events</option>
             </select>
-            <input type="submit" value="Show Events">
+            <input type="submit" value="Show Events" style=" background-color: #01579b;color: #fff; border-radius: 4px;">
         </form>
 
             

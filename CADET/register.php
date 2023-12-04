@@ -41,7 +41,8 @@ if (isset($_SESSION['campIdd'])) {
                 $sql = "INSERT INTO register VALUES ('$campId', '$regno', '$status')";
 
                 if ($conn->query($sql) === TRUE) {
-                    echo "Application submitted successfully.";
+                    
+                    echo "<script>alert('Application submitted successfully.');window.history.back();</script>";
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }

@@ -116,7 +116,7 @@ color: #f00;
         <li class="nav-item dropdown pe-3">
         <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span>Siva Koteswarrao</span>
+            <span>Siva Koteswara rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -165,13 +165,13 @@ color: #f00;
     <li class="nav-heading">Dashboard</li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="schedule.php">
-          <i class="bi bi-person"></i>
-          <span>Schedule</span>
+          <i class="bi bi-calendar"></i>
+          <span >Schedule</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="enrolled_students.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-people"></i>
           <span>Enrolled Students</span>
         </a>
       </li>

@@ -67,7 +67,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
         <li class="nav-item dropdown">
 
           <a class="nav-link nav-icon" href="#" >
-          <span class="d-none d-lg-block">Home</span>
+          <span class="d-none d-lg-block" style="border-bottom: 2px solid #00AEEF;  border-top: 2px solid #EF1C25;"><h5 style="margin: 0;">Home</h5></span>
            
           </a><!-- End Notification Icon -->
 
@@ -238,7 +238,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     </div><!-- End Page Title -->
 
     <section class="section">
-      <div class="row align-items-top">
+      <div class="row" style="justify-content: center;">
         <div class="col-lg-6">
 
           <!-- Default Card -->
@@ -263,7 +263,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
                 </select>
                 <br>
                 <br>
-                <center><input type="submit" value="Submit"></center>
+                <center><input type="submit" value="Submit" style=" background-color: #01579b;color: #fff; border-radius: 4px;"></center>
             </form>
             <?php
 require 'C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php';

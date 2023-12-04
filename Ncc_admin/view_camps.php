@@ -13,8 +13,6 @@
         .container {
             max-width: 800px;
             margin: 0 auto;
-          
-            color:#fff;
             padding: 20px;
         }
 
@@ -30,7 +28,7 @@
         }
 
         li {
-            background-color: #ffffff;
+           
             margin: 10px 0;
             align:center;
             padding: 20px;
@@ -91,7 +89,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>Camps</h1>
+       
         <br>
         <!-- Dropdown menu for camp types -->
         <form method="post" action="">
@@ -101,7 +99,7 @@
                 <option value="active">Active Camps</option>
                 <option value="completed">Completed Camps</option>
             </select>
-            <input type="submit" value="Show Camps">
+            <input type="submit" value="Show Camps" style="background-color: #01579b;color: #fff; ">
         </form>
 
             
@@ -144,7 +142,7 @@
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
                     $campName = $row['name'];
-                    echo "<li><a href='view_camps_final.php?campName=$campName'>$campName</a></li>";
+                    echo "<li><a href='vieww.php?campName=$campName'>$campName</a></li>";
                 }
             } else {
                 echo "No camps found for the selected type.";

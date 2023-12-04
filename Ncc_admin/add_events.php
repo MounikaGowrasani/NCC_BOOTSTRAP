@@ -105,12 +105,12 @@ color: #f00;
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
             <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">Siva Koteswara rao</span>
+            <span>Siva Koteswara rao</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Siva Koteswara rao</h6>
+              <h6>Siva Koteswarrao</h6>
               <span>Admin</span>
             </li>
             <li>
@@ -232,13 +232,13 @@ color: #f00;
     </div><!-- End Page Title -->
 
     <section class="section">
-      <div class="row">
+      <div class="row" style="justify-content: center;">
         <div class="col-lg-6">
 
           <div class="card">
             <div class="card-body">
 
-            <iframe  src="add_eventss.php" id="events" width="100%" height="450" frameborder="0"></iframe>
+         <iframe  src="add_eventss.php" id="events" width="100%" height="560" frameborder="0"></iframe>
 
        
            
