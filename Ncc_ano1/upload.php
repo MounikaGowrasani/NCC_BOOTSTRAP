@@ -1,39 +1,32 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_FILES['file'])) {
+    // File upload directory
+    $uploadDir = 'uploads/';
 
-// Replace these with your actual database credentials
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "ncc";
+    // File details
+    $fileName = $_FILES['file']['name'];
+    $fileType = $_FILES['file']['type'];
+    $fileTmpName = $_FILES['file']['tmp_name'];
 
-// Create a database connection
-$conn = new mysqli($servername, $username, $password, $database);
+    // Move the uploaded file to the desired directory
+    $targetFilePath = $uploadDir . basename($fileName);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    // Check if a file was uploaded successfully
-    if (isset($_FILES['file']) && $_FILES['file']['error'] === UPLOAD_ERR_OK) {
-        // Get file details
-        $fileName = $_FILES['file']['name'];
-        $fileTmpName = $_FILES['file']['tmp_name'];
-        $unit = "10A";
+  
+        // Database connection
+        $dbHost = 'localhost';
+        $dbUser = 'root';
+        $dbPass = '';
+        $dbName = 'ncc';
+        $unit='10A';
         $years = date("Y");
 
+        $conn = new mysqli($dbHost, $dbUser, $dbPass, $dbName);
 
-        // Read the file content
-        $fileContent = file_get_contents($fileTmpName);
-
-        // Escape and insert the filename and file content into the database
-        $escapedFileName = $conn->real_escape_string($fileName);
-
-        // Check if a record with the same 'years' value already exists
-        $sql = "SELECT * FROM pdf_files WHERE years = ? and unit= ?";
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
+        }
+        $sql = "SELECT * FROM files WHERE year = ? and unit= ?";
         $stmt = $conn->prepare($sql);
         $stmt->bind_param("is", $years,$unit);
 
@@ -46,28 +39,21 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             } else {
                 $stmt->close(); // Close the previous statement
 
-                // Insert the new record
-                $sql = "INSERT INTO pdf_files (file_name, file_content, unit, years)
-                        VALUES (?, ?, ?, ?)";
+        // Insert file metadata into the database
+        $sql = "INSERT INTO files (filename, filetype, filepath,unit,year) VALUES ('$fileName', '$fileType', '$targetFilePath','10A',$years)";
 
-                $stmt = $conn->prepare($sql);
-                $stmt->bind_param("sssi", $escapedFileName, $fileContent, $unit, $years);
-
-                if ($stmt->execute()) {
-                    echo "File uploaded and stored in the database.";
-                } else {
-                    echo "Error: " . $stmt->error;
-                }
+        if ($conn->query($sql) === TRUE) {
+            if (move_uploaded_file($fileTmpName, $targetFilePath)) {
+            echo "File uploaded successfully.";
             }
         } else {
-            echo "Error executing the query: " . $stmt->error;
+            echo "Error: " . $sql . "<br>" . $conn->error;
         }
-    } else {
-        echo "Error: File upload failed or no file selected.";
+       
+
+        
+    }
     }
 }
-
-
-// Close the database connection
-$conn->close();
+    
 ?>
