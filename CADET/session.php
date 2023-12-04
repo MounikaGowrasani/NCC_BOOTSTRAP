@@ -5,7 +5,7 @@ session_start();
 if (isset($_SESSION['uname'])) {
    
     $username = $_SESSION['uname'];
-    echo $username;
+    
     
     $query = "SELECT stu_name,pno,Registration_number FROM enroll WHERE regimental_number = '$username'";
     $result = $conn->query($query);
@@ -17,7 +17,7 @@ if (isset($_SESSION['uname'])) {
             $studentName = $row['stu_name'];
             $mno=$row['pno'];
             $regno=$row['Registration_number'];
-            echo $studentName;
+            
         }
     } else {
         echo "Student not found.";

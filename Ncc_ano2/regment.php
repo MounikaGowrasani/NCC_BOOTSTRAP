@@ -27,32 +27,16 @@ body {
     background-color: #fff; /* Light gray background */
 }
 
-.table-container {
-    overflow-x: auto;
-    margin: 20px;
-    background-color: #fff; /* White background for the table */
-    border-radius: 10px; /* Rounded corners for the table container */
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
 
-table {
-    width: 100%;
-    border-collapse: collapse;
-}
 
-th, td {
-    padding: 12px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-
-th {
-    background-color: FF9546; /* Orange background for table headers */
-    color: black;
-}
+    
+    th,td{
+        padding: 10px;
+    }
+   
 
 .regimental-number {
-    width: 80px;
+    width: 100px;
 }
 
 .button-container {
@@ -80,7 +64,7 @@ th {
 echo "</head>";
 echo "<h2>25(A) enrolled students</h2>";
 echo "<body>";
-    echo "<table border=><tr><th>ID</th>
+    echo "<table border='1'><tr><th>ID</th>
     <th>stu_name</th>
     <th>pno</th>
     <th>Email</th>
@@ -113,7 +97,7 @@ echo "<body>";
     $id=1;
     $alternateColor = false;
     while ($row = $result->fetch_assoc()) {
-        $rowColor = $alternateColor ? '#FFB476' : '#FFF7E8'; 
+        $rowColor = $alternateColor ? '#FFF' : '#FFF'; 
      
         echo "<tr style='background-color: " . $rowColor . ";'><td>" . $id . "</td><td>" . $row["stu_name"] . "</td><td>" . $row["pno"] ."</td><td>" . $row["Email"] . "</td><td>" . $row["Gender"] ."</td><td>" . $row["Registration_number"] . "</td><td>";
 

@@ -5,6 +5,5 @@ session_destroy();
 
 // Send a response
 echo "<script>alert('Logged out successfully');</script>";
-header("refresh:1;url=/NCC_BOOTSTRAP/NCC_LOGIN/loginmain.php");
-exit; 
+header("refresh:1;url=/NCC_BOOTSTRAP/NCC_LOGIN2/loginmain.php");
 ?>

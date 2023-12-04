@@ -7,30 +7,33 @@
         table {
             border-collapse: collapse;
             width: 80%;
+           
             margin: 20px auto;
         }
 
         /* Style table headers */
         th {
-            background-color: #f2f2f2;
+            background-color: #f6f9ff;
             text-align: left;
         }
 
         /* Style table rows */
         tr:nth-child(even) {
-            background-color: #f2f2f2;
+            background-color: #f6f9ff;
+          
         }
 
         /* Style table cells */
         td, th {
             padding: 8px;
-            border: 1px solid #ddd;
+            border: 1px solid #000;
+            border-width:1px;
         }
     </style>
 
 </head>
 <body>
-    <h2>Feedback Data</h2>
+    <center><h2>Feedback Data</h2></center>
 <?php
 // Database connection parameters
 $servername = "localhost";
@@ -46,7 +49,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 $query="SELECT * FROM feedback INNER JOIN enroll ON feedback.regno = enroll.regimental_number WHERE enroll.ncc_unit_enrolled='65-G,10(A)GBN NCC,Guntur' OR enroll.ncc_unit_enrolled='10A'";
-
     // Execute the query
     $result = $conn->query($query);
     if ($result->num_rows > 0) {

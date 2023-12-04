@@ -141,13 +141,13 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="view_schedule.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-calendar-event"></i>
           <span> View Schedule</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="eventss.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-menu-button-wide"></i>
           <span>View Events</span>
         </a>
       </li>
@@ -156,7 +156,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-menu-button-wide"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-journal-text"></i><span>Camps</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
@@ -174,14 +174,14 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       </li><!-- End Components Nav -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="feedback.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-chat-text"></i>
           <span>Feedback</span>
         </a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
-          <i class="bi bi-journal-text"></i><span>About NCC</span><i class="bi bi-chevron-down ms-auto"></i>
+          <i class="bi bi-lightbulb"></i><span>About NCC</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>

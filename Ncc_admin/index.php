@@ -167,7 +167,7 @@ color: #f00;
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="enrolled_students.php">
-          <i class="bi bi-people"></i>
+        <i class="bi bi-people"></i>
           <span>Enrolled Students</span>
         </a>
       </li>
@@ -218,6 +218,15 @@ color: #f00;
           </li>
         </ul>
       </li><!-- End Forms Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="feed_back.php">
+          <i class="bi bi-book"></i>
+          <span>Training Material</span>
+        </a>
+      </li>
+     
+
       <li class="nav-item">
         <a class="nav-link collapsed" href="feed_back.php">
           <i class="bi bi-question-circle"></i>
