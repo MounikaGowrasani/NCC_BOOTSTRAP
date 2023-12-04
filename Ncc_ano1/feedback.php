@@ -27,13 +27,13 @@
         td, th {
             padding: 8px;
             border: 1px solid #000;
-            border-width:2px;
+            border-width:1px;
         }
     </style>
 
 </head>
 <body>
-    <h2>Feedback Data</h2>
+    <center><h2>Feedback Data</h2></center>
 <?php
 // Database connection parameters
 $servername = "localhost";
