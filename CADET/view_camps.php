@@ -2,7 +2,8 @@
 require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
 ?>
 
-
+<?php include 'session.php'?>
+<?php include 'updatepassword.php';?>
 <!DOCTYPE html>
 <html lang="en">
 

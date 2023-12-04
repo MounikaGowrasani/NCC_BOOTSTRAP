@@ -210,16 +210,16 @@ input[disabled] {
 
     <ul class="sidebar-nav" id="sidebar-nav">
 
-    <li class="nav-heading">Dashboard</li>
+     <li class="nav-heading">Dashboard</li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="schedule.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-calendar-event"></i>
           <span>Schedule</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="enrolled_students.php">
-          <i class="bi bi-person"></i>
+          <i class="bi bi-people"></i>
           <span>Enrolled Students</span>
         </a>
       </li>
