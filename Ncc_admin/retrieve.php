@@ -47,28 +47,25 @@
 </head>
 <body>
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ncc";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+function closeConnection($conn) {
+    if ($conn) {
+        $conn->close();
+    }
+}
+
 if (isset($_POST["update"])) {
-    // Database connection parameters
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "ncc";
-
-    // Create a database connection
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
-
-    // Function to safely close the database connection
-    function closeConnection($conn) {
-        if ($conn) {
-            $conn->close();
-        }
-    }
-
     try {
         $scheduleType = $_POST['schedule_type'];
         $currentYear = date('Y');
@@ -77,32 +74,42 @@ if (isset($_POST["update"])) {
             $fileName = $_FILES['schedule_file']['name'];
             $fileTmpName = $_FILES['schedule_file']['tmp_name'];
 
-            // Ensure it's a PDF file
+            // Check if the uploaded file is a PDF
             if (pathinfo($fileName, PATHINFO_EXTENSION) === 'pdf') {
-                $fileContent = file_get_contents($fileTmpName);
-                $escapedFileName = $conn->real_escape_string($fileName);
-                $escapedFileContent = $conn->real_escape_string($fileContent);
-
-                $unit = ($scheduleType === 'update1') ? '10A' : '25A';
-
-                // Check if a record with the given criteria exists in the database
-                $sql_check = "SELECT * FROM pdf_files WHERE unit = '$unit' AND years = '$currentYear'";
-                $result = $conn->query($sql_check);
-
-                if ($result && $result->num_rows > 0) {
-                    // If the record exists, update it
-                    $sql = "UPDATE pdf_files SET file_name = '$escapedFileName', file_content = '$escapedFileContent' 
-                            WHERE unit = '$unit' AND years = '$currentYear'";
-                } else {
-                    // If the record doesn't exist, insert a new record
-                    $sql = "INSERT INTO pdf_files (unit, years, file_name, file_content)
-                            VALUES ('$unit', '$currentYear', '$escapedFileName', '$escapedFileContent')";
+                // Check the schedule type and assign appropriate target directory
+                if ($scheduleType === 'update1') {
+                    $targetDir = '../Ncc_ano1/uploads/';
+                } else if ($scheduleType === 'update2') {
+                    $targetDir = '../Ncc_ano2/uploads/';
                 }
+                $unit=($scheduleType === 'update1') ?'10A':'25A';
+                $targetFilePath = $targetDir . basename($fileName);
+                $fixed='/uploads';
+                $fixedpath= $fixed . basename($fileName);
+                // Move the uploaded file to the target directory
+                if (move_uploaded_file($fileTmpName, $targetFilePath)) {
+                    $stmt = $conn->prepare("SELECT * FROM files WHERE unit = ? AND year = ?");
+                    $stmt->bind_param("si", $unit, $currentYear);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
 
-                if ($conn->query($sql) === TRUE) {
-                    echo "<script> alert('File updated successfully.');</script>";
+                    if ($result->num_rows > 0) {
+                        $stmt = $conn->prepare("UPDATE files SET filename = ?, filepath = ? 
+                                                WHERE unit = ? AND year = ?");
+                        $stmt->bind_param("sssi", $fileName,$fixedpath , $unit, $currentYear);
+                    } else {
+                        $stmt = $conn->prepare("INSERT INTO files (filename, filepath, unit, year)
+                                                VALUES (?, ?, ?, ?)");
+                        $stmt->bind_param("sssi", $fileName, $fixedpath, $unit, $currentYear);
+                    }
+
+                    if ($stmt->execute()) {
+                        echo "<script>alert('File uploaded/updated successfully.');</script>";
+                    } else {
+                        echo "Error updating file: " . $stmt->error;
+                    }
                 } else {
-                    echo "Error updating file: " . $conn->error;
+                    echo "Error uploading file.";
                 }
             } else {
                 echo "Error: File must be a PDF.";
@@ -117,6 +124,9 @@ if (isset($_POST["update"])) {
     }
 }
 ?>
+
+    <!-- Rest of your HTML code remains unchanged -->
+    
 
 <div class="container">
     <a href="retrieve1.php" target="_self">View ANO1(10A) Schedule</a>
