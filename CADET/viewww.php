@@ -18,23 +18,22 @@ $sql = "SELECT ncc_unit_enrolled FROM enroll where regimental_number='$username'
 $result = $conn->query($sql);
 $row = $result->fetch_assoc();
 $unit=$row['ncc_unit_enrolled'];
+$folderPath = ($unit == '10A') ? '../Ncc_ano1/uploads/' : '../Ncc_ano2/uploads/';
+
 // Retrieve the PDF data from the database
-$years=date('Y');
-$sql = "SELECT file_name, file_content FROM pdf_files where unit='$unit' and years=$years"; // Change 'id' to match the PDF record you want to retrieve
+$years = date('Y');
+$sql = "SELECT * FROM files where unit='$unit' and year=$years"; // Change 'id' to match the PDF record you want to retrieve
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $fileName = $row['file_name'];
-    $fileContent = $row['file_content'];
-
-    // Set headers for PDF download
-    header("Content-Type: application/pdf");
-    header("Content-Disposition: inline; filename='$fileName'");
-    header("Content-Length: " . strlen($fileContent));
+    $filePath = $folderPath . $row['filename']; // Adjust the path based on the folder structure
     
-    // Output the PDF content
-    echo $fileContent;
+    // Serve the file to the user for download or display
+    header('Content-Type: application/pdf');
+    header('Content-Disposition: inline; filename="' . $row['filename'] . '"');
+    readfile($filePath); // Output the file
 } else {
     echo "PDF not found in the database.";
 }
