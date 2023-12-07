@@ -3,13 +3,12 @@
 <?php include('session.php');
 ?>
 <?php
-session_start(); // Start session to get regimental number
 $regimentalNumber=$_SESSION['uname'];
 // Get form data
 $year = $_POST['year'];
 $description = $_POST['description'];
 
-$regimentalNumber = $_SESSION['regimental_number'];
+$regimentalNumber = $_SESSION['uname'];
 
 // Create folder structure
 $uploadDir = 'cadet_achievements/' . $year . '/';
@@ -23,7 +22,7 @@ if (!is_dir($regimentalDir)) {
 }
 
 
-$sql = "SELECT MAX(achieve_no) AS max_achieve_no FROM cadet_achievements WHERE regimental_number = '$regimentalNumber'";
+$sql = "SELECT MAX(achieve_no) AS max_achieve_no FROM cadet_achievements WHERE regimental_number= '$regimentalNumber'";
 $result = $conn->query($sql);
 
 if ($result && $row = $result->fetch_assoc()) {
@@ -32,7 +31,7 @@ if ($result && $row = $result->fetch_assoc()) {
     $achieveNo = 1; // Set achieve_no to 1 if no previous entries for the regimental number
 }
 
-$conn->close();
+
 
 // File upload and database insertion
 $photoFile = $regimentalDir . 'photo_' . $achieveNo . '.' . pathinfo($_FILES['photo']['name'], PATHINFO_EXTENSION);

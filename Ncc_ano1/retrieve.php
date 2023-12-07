@@ -21,7 +21,7 @@ if ($result->num_rows > 0) {
     $row = $result->fetch_assoc();
     
     // File path stored in the database
-    $filePath = $row['filepath'];
+    $filePath = 'uploads/' . $row['filename']; // Adjust the path based on the folder structure
     
     // Serve the file to the user for download or display
     header('Content-Type: application/pdf');
