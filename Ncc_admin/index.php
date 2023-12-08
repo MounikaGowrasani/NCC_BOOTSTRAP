@@ -219,7 +219,12 @@ color: #f00;
         </ul>
       </li><!-- End Forms Nav -->
 
-    
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="view_achievementss.php">
+          <i class="bi bi-gem"></i>
+          <span>View Achievements</span>
+        </a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link collapsed" href="feed_back.php">

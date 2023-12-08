@@ -108,7 +108,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="enrolled_students.php">
-          <i class="bi bi-calendar"></i>
+          <i class="bi bi-people"></i>
           <span>Enrolled Students</span>
         </a>
       </li>
