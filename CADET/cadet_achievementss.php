@@ -242,11 +242,22 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
   
 
     <section class="section profile">
+  
     <section class="section">
+      <div class="row" style="justify-content: center;" >
+        <div class="col-lg-7">
 
+          <div class="card">
+            <div class="card-body" style="text-align: center;">
           <!-- PDF will be displayed here -->
-          <iframe  src="cadet_achievements.php" id="pdfViewer" width="80%" height="600px" frameborder="0" ></iframe>
-     
+          <iframe  src="cadet_achievements.php" id="pdfViewer" width="80%" height="400px" frameborder="0" ></iframe>
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
 
 
 
