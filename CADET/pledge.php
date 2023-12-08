@@ -171,6 +171,32 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
       </ul>
     </li><!-- End Components Nav -->
     <li class="nav-item">
+        <a class="nav-link collapsed" href="training_materials.php">
+          <i class="bi bi-book"></i>
+          <span>Training Material</span>
+        </a>
+      </li>
+      
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-gem"></i><span>Cadet Achievements</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="icons-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="cadet_achievementss.php">
+              <i class="bi bi-circle"></i><span>Upload Achievements</span>
+            </a>
+          </li>
+          <li>
+            <a href="retrieve_achievee.php">
+              <i class="bi bi-circle"></i><span>View Achievements</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- End Icons Nav -->
+    <li class="nav-item">
       <a class="nav-link collapsed" href="feedback.php">
         <i class="bi bi-chat-text"></i>
         <span>Feedback</span>
@@ -256,8 +282,7 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
             </div>
           </div>
 
-         
-
+  
         </div>
 
         <div id="password-form" class="modal" style="display:none;">
@@ -277,8 +302,6 @@ require('C:/xampp/htdocs/NCC_BOOTSTRAP/NCC_LOGIN/dbcon.php');
     </section>
 
   </main><!-- End #main -->
-
-  
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
